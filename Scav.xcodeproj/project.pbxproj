@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E3FC3D20F67F2F00DAE40D /* HuntMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */; };
+		14E3FC3E20F67F2F00DAE40D /* HuntMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */; };
+		14E3FC4420F69A8100DAE40D /* UIViewController+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */; };
+		14E3FC4720F69E3000DAE40D /* UserLocationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */; };
+		14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */; };
 		FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C7E20F6713000F4C60A /* AppDelegate.swift */; };
-		FC384C8120F6713000F4C60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C8020F6713000F4C60A /* ViewController.swift */; };
-		FC384C8420F6713000F4C60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8220F6713000F4C60A /* Main.storyboard */; };
 		FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8520F6713200F4C60A /* Assets.xcassets */; };
 		FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntMapViewController.swift; sourceTree = "<group>"; };
+		14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntMapViewController.xib; sourceTree = "<group>"; };
+		14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+XIB.swift"; sourceTree = "<group>"; };
+		14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationAlertViewController.swift; sourceTree = "<group>"; };
+		14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserLocationAlertViewController.xib; sourceTree = "<group>"; };
 		FC384C7B20F6713000F4C60A /* Scav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC384C7E20F6713000F4C60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC384C8020F6713000F4C60A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC384C8320F6713000F4C60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC384C8520F6713200F4C60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC384C8820F6713200F4C60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC384C8A20F6713200F4C60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				FC384C7E20F6713000F4C60A /* AppDelegate.swift */,
-				FC384C8020F6713000F4C60A /* ViewController.swift */,
-				FC384C8220F6713000F4C60A /* Main.storyboard */,
 				FC384C8520F6713200F4C60A /* Assets.xcassets */,
 				FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */,
 				FC384C8A20F6713200F4C60A /* Info.plist */,
+				14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */,
+				14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */,
+				14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */,
+				14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */,
+				14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */,
 			);
 			path = Scav;
 			sourceTree = "<group>";
@@ -124,7 +133,8 @@
 			files = (
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
-				FC384C8420F6713000F4C60A /* Main.storyboard in Resources */,
+				14E3FC3E20F67F2F00DAE40D /* HuntMapViewController.xib in Resources */,
+				14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +145,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC384C8120F6713000F4C60A /* ViewController.swift in Sources */,
+				14E3FC4420F69A8100DAE40D /* UIViewController+XIB.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
+				14E3FC3D20F67F2F00DAE40D /* HuntMapViewController.swift in Sources */,
+				14E3FC4720F69E3000DAE40D /* UserLocationAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC384C8220F6713000F4C60A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC384C8320F6713000F4C60A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
