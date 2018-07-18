@@ -11,7 +11,7 @@ import UIKit
 class HuntListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var huntNameLabel: UILabel!
-    @IBOutlet weak var huntImageView: UIImageView!
+    @IBOutlet weak var huntDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

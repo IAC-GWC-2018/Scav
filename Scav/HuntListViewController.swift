@@ -35,6 +35,8 @@ class HuntListViewController: UIViewController {
     
     private func createAddHuntButton() {
         let addButton = UIButton(type: .contactAdd)
+        addButton.setTitle("  Create", for: .normal)
+        addButton.contentHorizontalAlignment = .left
         let addButtonItem = UIBarButtonItem(customView: addButton)
         addButton.addTarget(self, action:#selector(self.showHuntCreation), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = addButtonItem
@@ -61,7 +63,8 @@ extension HuntListViewController: UITableViewDataSource {
         }
         
         cell.huntNameLabel.text = hunts[indexPath.row]
-        cell.huntImageView.image = #imageLiteral(resourceName: "Mayki")
+        cell.huntDescriptionLabel.text = "Lorem ipsum dolor sit amet, in vis viris volumus tincidunt, eos atqui referrentur concludaturque id. Noster diceret interpretaris mea no. Ut has meis inermis gubergren, sit nulla pericula consetetur te. Has assum insolens neglegentur ut, erant decore vocent mel in."
+        
         
         return cell
     }

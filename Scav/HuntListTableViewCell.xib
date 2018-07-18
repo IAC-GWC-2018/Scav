@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,43 +15,36 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="61" id="KGk-i7-Jjw" customClass="HuntListTableViewCell" customModule="Scav" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59.666666666666664"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hunt name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-DB-aaS">
-                        <rect key="frame" x="80" y="10" width="81.333333333333314" height="21"/>
+                        <rect key="frame" x="10" y="10" width="310" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXr-IK-mjn">
-                        <rect key="frame" x="20" y="10" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="9QE-A5-ddI"/>
-                            <constraint firstAttribute="width" constant="40" id="Xqe-3B-hTc"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-mM-cSo" userLabel="Description">
-                        <rect key="frame" x="80" y="28" width="86" height="31"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="hunt description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="88888888" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-mM-cSo" userLabel="Description">
+                        <rect key="frame" x="10" y="40" width="300" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ISt-DB-aaS" firstAttribute="leading" secondItem="ZXr-IK-mjn" secondAttribute="trailing" constant="20" id="0VK-oW-534"/>
-                    <constraint firstItem="ISt-DB-aaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="8J8-af-NPG"/>
-                    <constraint firstItem="ZXr-IK-mjn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uvs-Qb-ghG"/>
-                    <constraint firstItem="ZXr-IK-mjn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Z5x-PV-PHv"/>
-                    <constraint firstItem="4Pc-mM-cSo" firstAttribute="centerX" secondItem="ISt-DB-aaS" secondAttribute="trailing" id="bqm-N6-BQ5"/>
-                    <constraint firstItem="ZXr-IK-mjn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="iPU-Dj-Oa5"/>
-                    <constraint firstAttribute="bottom" secondItem="ZXr-IK-mjn" secondAttribute="bottom" constant="20" id="yoJ-Gl-OPS"/>
+                    <constraint firstAttribute="trailing" secondItem="ISt-DB-aaS" secondAttribute="trailing" id="6Su-sq-EtL"/>
+                    <constraint firstItem="ISt-DB-aaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="8J8-af-NPG"/>
+                    <constraint firstAttribute="bottom" secondItem="4Pc-mM-cSo" secondAttribute="bottom" constant="10" id="EFn-8g-P7Q"/>
+                    <constraint firstItem="4Pc-mM-cSo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HbK-cx-TZB"/>
+                    <constraint firstItem="4Pc-mM-cSo" firstAttribute="top" secondItem="ISt-DB-aaS" secondAttribute="bottom" constant="10" id="M4r-lK-wgr"/>
+                    <constraint firstItem="ISt-DB-aaS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="U8V-hm-hKt"/>
+                    <constraint firstAttribute="trailing" secondItem="4Pc-mM-cSo" secondAttribute="trailing" constant="10" id="avV-RD-vTE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="huntImageView" destination="ZXr-IK-mjn" id="jfB-Qe-m8U"/>
+                <outlet property="huntDescriptionLabel" destination="4Pc-mM-cSo" id="y9x-uu-J4n"/>
                 <outlet property="huntNameLabel" destination="ISt-DB-aaS" id="r50-g6-Zxt"/>
             </connections>
             <point key="canvasLocation" x="375" y="40"/>
