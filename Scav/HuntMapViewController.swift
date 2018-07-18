@@ -21,18 +21,17 @@ class HuntMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestLocation()
-        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentUserLocationAuthorizationAlert()
+        startUpdatingLocation()
     }
 
+    
     private func presentUserLocationAuthorizationAlert() {
         let alertController = UIAlertController(title: "SCAV wants to access your location", message: "When prompted, please enable location services in order to complete scavenger hunts.\nHappy hunting!", preferredStyle: .alert)
         
@@ -49,15 +48,15 @@ class HuntMapViewController: UIViewController {
         self.present(alertController, animated: true)
         
     }
-   //lines 53-60 are from code Dylan wrote for a separate project and sent to us
-    private func requestLocationAuthorizations() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-    }
-    
+ 
     private func startUpdatingLocation() {
-        if CLLocationManager.locationServicesEnabled() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
+        case .notDetermined:
+            presentUserLocationAuthorizationAlert()
+        default:
+            ()
         }
     }
 }
@@ -65,13 +64,22 @@ class HuntMapViewController: UIViewController {
 
 extension HuntMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+        default:
+            ()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if locations.first != nil {
-            print("location:: (location)")
+        guard let location = locations.last else {
+            return
         }
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        mapView?.setRegion(region, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
