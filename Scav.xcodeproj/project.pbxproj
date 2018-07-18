@@ -11,6 +11,7 @@
 		E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21431D320F67F2F00531E96 /* HuntListViewController.xib */; };
 		E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */; };
 		E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */; };
+		E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B72E2020FFADB90039703A /* HuntNavigationController.swift */; };
 		FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C7E20F6713000F4C60A /* AppDelegate.swift */; };
 		FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8520F6713200F4C60A /* Assets.xcassets */; };
 		FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 		E21431D320F67F2F00531E96 /* HuntListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListViewController.xib; sourceTree = "<group>"; };
 		E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListTableViewCell.swift; sourceTree = "<group>"; };
 		E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListTableViewCell.xib; sourceTree = "<group>"; };
+		E2B72E2020FFADB90039703A /* HuntNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntNavigationController.swift; sourceTree = "<group>"; };
 		FC384C7B20F6713000F4C60A /* Scav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC384C7E20F6713000F4C60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC384C8520F6713200F4C60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */,
 				FC384C8A20F6713200F4C60A /* Info.plist */,
 				E21431D220F67F2F00531E96 /* HuntListViewController.swift */,
+				E2B72E2020FFADB90039703A /* HuntNavigationController.swift */,
 				E21431D320F67F2F00531E96 /* HuntListViewController.xib */,
 				E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */,
 				E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */,
 				E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */,
 				E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
