@@ -12,7 +12,7 @@ class HuntListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var hunts = ["Ijoo", "Jenny", "Mayki"]
+    var hunts = Hunt.testHunts()
     
     static func create() -> HuntListViewController {
         return self.init(nibName: String(describing: self.self), bundle: nil)
@@ -68,8 +68,9 @@ extension HuntListViewController: UITableViewDataSource {
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = CGFloat(10)
         cell.layer.borderColor = tableView.backgroundColor?.cgColor
-        cell.huntNameLabel.text = hunts[indexPath.row]
-        cell.huntDescriptionLabel.text = "Lorem ipsum dolor sit amet, in vis viris volumus tincidunt, eos atqui referrentur concludaturque id. Noster diceret interpretaris mea no. Ut has meis inermis gubergren, sit nulla pericula consetetur te. Has assum insolens neglegentur ut, erant decore vocent mel in."
+        let hunt = hunts[indexPath.row]
+        cell.huntNameLabel.text = hunt.title
+        cell.huntDescriptionLabel.text = hunt.description
         
         return cell
     }
