@@ -8,12 +8,34 @@
 
 import Foundation
 
-struct Hunt {
+struct Hunt: Codable {
     let title: String
     let description: String
     let destinations: [Destination]
     
+    enum CodingKeys: String, CodingKey {
+        case title, description, destinations
+    }
+        
+    static func getHunts(completion: (([Hunt], Error?) -> Void)) {
+        
+        HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
+            if (data != nil) {
+                
+            } else {
+                print(error!)
+            }
+        }
+        
+        
+    }
+    
     static func testHunts() -> [Hunt] {
         return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination())]
     }
+    
+    func toData() -> Data {
+        return Data()
+    }
+    
 }

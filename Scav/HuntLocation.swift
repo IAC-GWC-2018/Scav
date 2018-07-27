@@ -1,5 +1,5 @@
 //
-//  Hint.swift
+//  HuntLocation.swift
 //  Scav
 //
 //  Created by Mayki Hu on 7/27/18.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Hint: Hashable, Codable {
-    let title: String
-    let caption: String
+struct HuntLocation: Hashable, Codable {
+    let latitude: Double
+    let longitude: Double
     let id: Int
     
     var hashValue: Int {
@@ -18,10 +18,6 @@ struct Hint: Hashable, Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case title, caption, id
-    }
-    
-    static func testHint() -> [Hint] {
-        return [Hint(title: "hint0", caption: "hint0 caption", id: 0)]
+        case latitude, longitude, id
     }
 }

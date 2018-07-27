@@ -24,6 +24,7 @@ class HuntListViewController: UIViewController {
         configureTableView()
         createAddHuntButton()
         self.title = "Hunt List"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "GujaratiSangamMN-Bold", size: 20.0)!]
     }
     
     private func configureTableView() {
@@ -60,17 +61,27 @@ extension HuntListViewController: UITableViewDataSource {
         return hunts.count
     }
     
+    private func customizeCell(_ cell: HuntListTableViewCell) {
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = CGFloat(10)
+        cell.layer.borderColor = tableView.backgroundColor?.cgColor
+        cell.huntNameLabel.font = UIFont(name: "GujaratiSangamMN-Bold", size: 20.0)
+        cell.huntDescriptionLabel.font = UIFont(name: "GujaratiSangamMN", size: 14.0)
+    }
+    
+    private func insertHuntData(_ cell: HuntListTableViewCell, cellForRowAt indexPath: IndexPath) {
+        let hunt = hunts[indexPath.row]
+        cell.huntNameLabel.text = hunt.title
+        cell.huntDescriptionLabel.text = hunt.description
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HuntListTableViewCell.self)) as? HuntListTableViewCell else {
             return UITableViewCell()
         }
         
-        cell.layer.cornerRadius = 20
-        cell.layer.borderWidth = CGFloat(10)
-        cell.layer.borderColor = tableView.backgroundColor?.cgColor
-        let hunt = hunts[indexPath.row]
-        cell.huntNameLabel.text = hunt.title
-        cell.huntDescriptionLabel.text = hunt.description
+        customizeCell(cell)
+        insertHuntData(cell, cellForRowAt: indexPath)
         
         return cell
     }
@@ -78,7 +89,6 @@ extension HuntListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("show mapViewController")
     }
-    
 }
 
 extension HuntListViewController: UITableViewDelegate {

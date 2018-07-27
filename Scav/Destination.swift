@@ -9,17 +9,22 @@
 import Foundation
 import MapKit
 
-struct Destination: Hashable {
+struct Destination: Hashable, Codable {
     let title: String
-    let location: CLLocation
+    let location: HuntLocation
     let hints: [Hint]
     let id: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case title, location, hints, id
+    }
     
     var hashValue: Int {
         return id.hashValue
     }
     
     static func testDestination() -> [Destination] {
-        return [Destination(title: "destination0", location: CLLocation(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
+        return [Destination(title: "destination0", location: HuntLocation(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
     }
 }
+
