@@ -155,15 +155,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */,
-=======
 				454D941520FFEAD600BA788A /* HuntLocationView.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				45D425DA210B9623003CF06D /* HuntLocationViewController.xib in Resources */,
->>>>>>> Stashed changes
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
 				B7C07A8720F67F3300832294 /* HuntCreationViewController.xib in Resources */,
 			);
