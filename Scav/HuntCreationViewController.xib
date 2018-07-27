@@ -19,11 +19,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="524" height="727"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-HJ-1a7">
-                    <rect key="frame" x="0.0" y="0.0" width="524" height="727"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6c-lu-5OB">
                             <rect key="frame" x="16" y="8" width="46" height="30"/>
@@ -33,13 +33,13 @@
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaK-1u-HVd">
-                            <rect key="frame" x="64" y="181" width="396" height="30"/>
+                            <rect key="frame" x="64" y="181" width="247" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a57-Bf-lnf">
-                            <rect key="frame" x="64" y="250" width="396" height="150"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a57-Bf-lnf">
+                            <rect key="frame" x="64" y="294" width="247" height="150"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="skf-6Q-zxA"/>
                             </constraints>
@@ -58,21 +58,21 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-01-bkw">
-                            <rect key="frame" x="64" y="90" width="396" height="30"/>
+                            <rect key="frame" x="64" y="90" width="247" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-kT-5jh">
-                            <rect key="frame" x="430" y="236" width="30" height="10"/>
-                            <state key="normal" title="Add"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-VQ-QKS">
-                            <rect key="frame" x="64" y="236" width="42" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-VQ-QKS">
+                            <rect key="frame" x="64" y="251" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-kT-5jh">
+                            <rect key="frame" x="281" y="246" width="30" height="30"/>
+                            <state key="normal" title="Add"/>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="NaK-1u-HVd" firstAttribute="trailing" secondItem="rsY-01-bkw" secondAttribute="trailing" id="0hg-EP-HXs"/>
@@ -89,7 +89,6 @@
                         <constraint firstItem="a57-Bf-lnf" firstAttribute="centerX" secondItem="O7z-HJ-1a7" secondAttribute="centerX" id="Oxk-az-8pc"/>
                         <constraint firstItem="NaK-1u-HVd" firstAttribute="top" secondItem="Hdn-P3-Gee" secondAttribute="bottom" constant="15" id="Wki-qp-saE"/>
                         <constraint firstItem="Hdn-P3-Gee" firstAttribute="top" secondItem="rsY-01-bkw" secondAttribute="bottom" constant="25" id="YZO-Yy-2Ug"/>
-                        <constraint firstItem="a57-Bf-lnf" firstAttribute="top" secondItem="y2t-kT-5jh" secondAttribute="bottom" constant="4" id="ZXx-6V-nyH"/>
                         <constraint firstAttribute="trailing" secondItem="rsY-01-bkw" secondAttribute="trailing" constant="150" id="eZO-HC-d3h"/>
                         <constraint firstItem="rsY-01-bkw" firstAttribute="top" secondItem="3ms-Ps-bex" secondAttribute="bottom" constant="15" id="iWJ-g5-Eug"/>
                         <constraint firstItem="R6c-lu-5OB" firstAttribute="leading" secondItem="O7z-HJ-1a7" secondAttribute="leadingMargin" constant="8" id="k4J-kY-IYo"/>
@@ -100,7 +99,7 @@
                     </constraints>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-Sx-1lX">
-                    <rect key="frame" x="0.0" y="677" width="524" height="50"/>
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3YV-PI-lGG"/>
                     </constraints>
