@@ -20,26 +20,26 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hunt name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-DB-aaS">
-                        <rect key="frame" x="10" y="10" width="310" height="20"/>
+                        <rect key="frame" x="20" y="10" width="280" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" text="hunt description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="88888888" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-mM-cSo" userLabel="Description">
-                        <rect key="frame" x="10" y="40" width="300" height="20.333333333333329"/>
+                        <rect key="frame" x="20" y="40" width="280" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ISt-DB-aaS" secondAttribute="trailing" id="6Su-sq-EtL"/>
-                    <constraint firstItem="ISt-DB-aaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="8J8-af-NPG"/>
-                    <constraint firstAttribute="bottom" secondItem="4Pc-mM-cSo" secondAttribute="bottom" constant="10" id="EFn-8g-P7Q"/>
-                    <constraint firstItem="4Pc-mM-cSo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HbK-cx-TZB"/>
+                    <constraint firstAttribute="trailing" secondItem="ISt-DB-aaS" secondAttribute="trailing" constant="20" id="6Su-sq-EtL"/>
+                    <constraint firstItem="ISt-DB-aaS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="8J8-af-NPG"/>
+                    <constraint firstAttribute="bottom" secondItem="4Pc-mM-cSo" secondAttribute="bottom" constant="20" id="EFn-8g-P7Q"/>
+                    <constraint firstItem="4Pc-mM-cSo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="HbK-cx-TZB"/>
                     <constraint firstItem="4Pc-mM-cSo" firstAttribute="top" secondItem="ISt-DB-aaS" secondAttribute="bottom" constant="10" id="M4r-lK-wgr"/>
-                    <constraint firstItem="ISt-DB-aaS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="U8V-hm-hKt"/>
-                    <constraint firstAttribute="trailing" secondItem="4Pc-mM-cSo" secondAttribute="trailing" constant="10" id="avV-RD-vTE"/>
+                    <constraint firstItem="ISt-DB-aaS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="U8V-hm-hKt"/>
+                    <constraint firstAttribute="trailing" secondItem="4Pc-mM-cSo" secondAttribute="trailing" constant="20" id="avV-RD-vTE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
