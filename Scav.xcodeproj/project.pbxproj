@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21431D220F67F2F00531E96 /* HuntListViewController.swift */; };
+		E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21431D320F67F2F00531E96 /* HuntListViewController.xib */; };
+		E2225E5E210B8404002C706D /* Hunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E5D210B8404002C706D /* Hunt.swift */; };
+		E2225E60210B8412002C706D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E5F210B8412002C706D /* Destination.swift */; };
+		E2225E62210B841F002C706D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E61210B841F002C706D /* Hint.swift */; };
+		E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */; };
+		E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */; };
+		E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B72E2020FFADB90039703A /* HuntNavigationController.swift */; };
 		FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C7E20F6713000F4C60A /* AppDelegate.swift */; };
-		FC384C8120F6713000F4C60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C8020F6713000F4C60A /* ViewController.swift */; };
-		FC384C8420F6713000F4C60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8220F6713000F4C60A /* Main.storyboard */; };
 		FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8520F6713200F4C60A /* Assets.xcassets */; };
 		FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E21431D220F67F2F00531E96 /* HuntListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListViewController.swift; sourceTree = "<group>"; };
+		E21431D320F67F2F00531E96 /* HuntListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListViewController.xib; sourceTree = "<group>"; };
+		E2225E5D210B8404002C706D /* Hunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunt.swift; sourceTree = "<group>"; };
+		E2225E5F210B8412002C706D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		E2225E61210B841F002C706D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListTableViewCell.swift; sourceTree = "<group>"; };
+		E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListTableViewCell.xib; sourceTree = "<group>"; };
+		E2B72E2020FFADB90039703A /* HuntNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntNavigationController.swift; sourceTree = "<group>"; };
 		FC384C7B20F6713000F4C60A /* Scav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC384C7E20F6713000F4C60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC384C8020F6713000F4C60A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC384C8320F6713000F4C60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC384C8520F6713200F4C60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC384C8820F6713200F4C60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC384C8A20F6713200F4C60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,11 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				FC384C7E20F6713000F4C60A /* AppDelegate.swift */,
-				FC384C8020F6713000F4C60A /* ViewController.swift */,
-				FC384C8220F6713000F4C60A /* Main.storyboard */,
 				FC384C8520F6713200F4C60A /* Assets.xcassets */,
 				FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */,
 				FC384C8A20F6713200F4C60A /* Info.plist */,
+				E21431D220F67F2F00531E96 /* HuntListViewController.swift */,
+				E2B72E2020FFADB90039703A /* HuntNavigationController.swift */,
+				E21431D320F67F2F00531E96 /* HuntListViewController.xib */,
+				E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */,
+				E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */,
+				E2225E5D210B8404002C706D /* Hunt.swift */,
+				E2225E5F210B8412002C706D /* Destination.swift */,
+				E2225E61210B841F002C706D /* Hint.swift */,
 			);
 			path = Scav;
 			sourceTree = "<group>";
@@ -122,9 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
+				E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */,
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
-				FC384C8420F6713000F4C60A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC384C8120F6713000F4C60A /* ViewController.swift in Sources */,
+				E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */,
+				E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */,
+				E2225E60210B8412002C706D /* Destination.swift in Sources */,
+				E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */,
+				E2225E62210B841F002C706D /* Hint.swift in Sources */,
+				E2225E5E210B8404002C706D /* Hunt.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC384C8220F6713000F4C60A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC384C8320F6713000F4C60A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,7 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y669D8ZK5T;
 				INFOPLIST_FILE = Scav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y669D8ZK5T;
 				INFOPLIST_FILE = Scav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
