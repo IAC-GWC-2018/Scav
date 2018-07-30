@@ -20,9 +20,7 @@ struct Hunt: Codable {
     static func getHunts(completion: (([Hunt], Error?) -> Void)) {
         
         HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
-            if (data != nil) {
-                
-            } else {
+            if (error != nil) {
                 print(error!)
             }
         }

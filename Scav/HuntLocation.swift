@@ -11,13 +11,8 @@ import Foundation
 struct HuntLocation: Hashable, Codable {
     let latitude: Double
     let longitude: Double
-    let id: Int
-    
-    var hashValue: Int {
-        return id.hashValue
-    }
     
     enum CodingKeys: String, CodingKey {
-        case latitude, longitude, id
+        case latitude, longitude
     }
 }
