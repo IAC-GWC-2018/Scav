@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntCreationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
+                <outlet property="add" destination="bt2-hf-iHi" id="zsq-nh-GFe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,6 +40,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-hf-iHi">
                     <rect key="frame" x="271" y="364" width="40" height="30"/>
                     <state key="normal" title="Add"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="xtl-gh-Oe7"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ijg-Xt-d7x">
                     <rect key="frame" x="64" y="283" width="247" height="30"/>

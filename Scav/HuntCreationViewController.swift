@@ -9,7 +9,10 @@ import UIKit
 class HuntCreationViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var tableView: UIStackView!
+    
+    @IBOutlet weak var add: UIButton!
+    
     static func create() -> HuntCreationViewController {
         return HuntCreationViewController(nibName: String(describing: self.self), bundle: nil)
     }
@@ -23,13 +26,17 @@ class HuntCreationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        let add = UIButton()
-        add.setTitle("Test", for: .normal)
-        add.backgroundColor = UIColor.black
-        
-        stackView.addArrangedSubview(add)
+    @IBAction func buttonTapped(_ sender:
+        UIButton) {
+        showHuntLocation()
     }
+
+
+    @objc private func showHuntLocation() {
+        let creationVC = HuntLocationViewController.create()
+        present(creationVC, animated: true)
+    }
+    
     
     
     
