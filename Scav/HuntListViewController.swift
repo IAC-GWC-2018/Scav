@@ -27,8 +27,8 @@ class HuntListViewController: UIViewController {
     }
     
     private func configureTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = (self as? UITableViewDataSource)
+        tableView.delegate = self as? UITableViewDelegate
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.green.withAlphaComponent(0.2)
@@ -46,8 +46,14 @@ class HuntListViewController: UIViewController {
     }
     
     @objc private func showHuntCreation() {
-        print("show huntCreationController")
+        let creationVC = HuntCreationViewController.create()
+        present(creationVC, animated: true)
     }
+    
+        // Do any additional setup if required.
+    
+    
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,32 +61,4 @@ class HuntListViewController: UIViewController {
     }
 }
 
-extension HuntListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hunts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HuntListTableViewCell.self)) as? HuntListTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        cell.layer.cornerRadius = 20
-        cell.layer.borderWidth = CGFloat(10)
-        cell.layer.borderColor = tableView.backgroundColor?.cgColor
-        let hunt = hunts[indexPath.row]
-        cell.huntNameLabel.text = hunt.title
-        cell.huntDescriptionLabel.text = hunt.description
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("show mapViewController")
-    }
-    
-}
 
-extension HuntListViewController: UITableViewDelegate {
-    
-}

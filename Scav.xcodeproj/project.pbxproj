@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		454D941520FFEAD600BA788A /* HuntLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454D941420FFEAD600BA788A /* HuntLocationView.xib */; };
 		45D425D9210B9623003CF06D /* HuntLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D425D7210B9623003CF06D /* HuntLocationViewController.swift */; };
 		45D425DA210B9623003CF06D /* HuntLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D425D8210B9623003CF06D /* HuntLocationViewController.xib */; };
+		45D425DE210BA74A003CF06D /* myLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D425DD210BA74A003CF06D /* myLocationsView.swift */; };
+		45D425E0210BA761003CF06D /* myLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D425DF210BA761003CF06D /* myLocationsView.xib */; };
+		B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */; };
+		B7C07A8720F67F3300832294 /* HuntCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */; };
 		E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21431D220F67F2F00531E96 /* HuntListViewController.swift */; };
 		E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21431D320F67F2F00531E96 /* HuntListViewController.xib */; };
 		E2225E5E210B8404002C706D /* Hunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E5D210B8404002C706D /* Hunt.swift */; };
@@ -18,17 +21,18 @@
 		E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */; };
 		E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */; };
 		E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B72E2020FFADB90039703A /* HuntNavigationController.swift */; };
-		B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */; };
-		B7C07A8720F67F3300832294 /* HuntCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */; };
 		FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC384C7E20F6713000F4C60A /* AppDelegate.swift */; };
 		FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8520F6713200F4C60A /* Assets.xcassets */; };
 		FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		454D941420FFEAD600BA788A /* HuntLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntLocationView.xib; sourceTree = "<group>"; };
 		45D425D7210B9623003CF06D /* HuntLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntLocationViewController.swift; sourceTree = "<group>"; };
 		45D425D8210B9623003CF06D /* HuntLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntLocationViewController.xib; sourceTree = "<group>"; };
+		45D425DD210BA74A003CF06D /* myLocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myLocationsView.swift; sourceTree = "<group>"; };
+		45D425DF210BA761003CF06D /* myLocationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myLocationsView.xib; sourceTree = "<group>"; };
+		B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntCreationViewController.swift; sourceTree = "<group>"; };
+		B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntCreationViewController.xib; sourceTree = "<group>"; };
 		E21431D220F67F2F00531E96 /* HuntListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListViewController.swift; sourceTree = "<group>"; };
 		E21431D320F67F2F00531E96 /* HuntListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListViewController.xib; sourceTree = "<group>"; };
 		E2225E5D210B8404002C706D /* Hunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunt.swift; sourceTree = "<group>"; };
@@ -37,8 +41,6 @@
 		E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListTableViewCell.swift; sourceTree = "<group>"; };
 		E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListTableViewCell.xib; sourceTree = "<group>"; };
 		E2B72E2020FFADB90039703A /* HuntNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntNavigationController.swift; sourceTree = "<group>"; };
-		B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntCreationViewController.swift; sourceTree = "<group>"; };
-		B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntCreationViewController.xib; sourceTree = "<group>"; };
 		FC384C7B20F6713000F4C60A /* Scav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC384C7E20F6713000F4C60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC384C8520F6713200F4C60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 				E2225E61210B841F002C706D /* Hint.swift */,
 				B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */,
 				B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */,
-				454D941420FFEAD600BA788A /* HuntLocationView.xib */,
-				45D425D7210B9623003CF06D /* HuntLocationViewController.swift */,
 				45D425D8210B9623003CF06D /* HuntLocationViewController.xib */,
+				45D425D7210B9623003CF06D /* HuntLocationViewController.swift */,
+				45D425DD210BA74A003CF06D /* myLocationsView.swift */,
+				45D425DF210BA761003CF06D /* myLocationsView.xib */,
 			);
 			path = Scav;
 			sourceTree = "<group>";
@@ -156,9 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */,
+				45D425E0210BA761003CF06D /* myLocationsView.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */,
-				454D941520FFEAD600BA788A /* HuntLocationView.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				45D425DA210B9623003CF06D /* HuntLocationViewController.xib in Resources */,
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
@@ -180,6 +183,7 @@
 				E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */,
 				E2225E62210B841F002C706D /* Hint.swift in Sources */,
 				E2225E5E210B8404002C706D /* Hunt.swift in Sources */,
+				45D425DE210BA74A003CF06D /* myLocationsView.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
 				B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */,
 			);
