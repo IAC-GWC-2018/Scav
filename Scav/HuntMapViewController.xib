@@ -30,6 +30,13 @@
                         <action selector="huntButtonPressed:" destination="-1" eventType="touchUpInside" id="wxI-BS-nHR"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCa-rk-gDj">
+                    <rect key="frame" x="24" y="44" width="34" height="30"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="i8W-Ym-JSs"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -37,6 +44,8 @@
                 <constraint firstItem="BU4-K9-PUa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="3oJ-27-4lQ"/>
                 <constraint firstItem="r0N-hY-U1n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F51-qI-TRO"/>
                 <constraint firstItem="r0N-hY-U1n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jpn-3I-bdZ"/>
+                <constraint firstItem="xCa-rk-gDj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="R5R-Ou-Ufd"/>
+                <constraint firstItem="xCa-rk-gDj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="aDx-ZV-cAy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BU4-K9-PUa" secondAttribute="trailing" constant="24" id="fDW-8m-7NV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r0N-hY-U1n" secondAttribute="bottom" id="gj1-2T-c8S"/>
             </constraints>

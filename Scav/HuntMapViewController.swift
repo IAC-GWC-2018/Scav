@@ -29,11 +29,16 @@ class HuntMapViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         mapView.showsUserLocation = true
+        configureBackButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startUpdatingLocation()
+    }
+    
+    private func configureBackButton() {
+        navigationController?.navigationItem.backBarButtonItem = nil
     }
 
     
@@ -65,6 +70,22 @@ class HuntMapViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let title = "You're about to exit your scavenger hunt. Are you sure you want to that?"
+        let message = "Please note: once you exit the hunt, all your progress will be lost."
+        let popup = PopupDialog(title: title, message: message, tapGestureDismissal: false)
+        
+        let okayButton = DefaultButton(title: "End scavenger hunt and lose progress") { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
+        let cancelButton = DefaultButton(title: "Continue scavenger hunt", action: nil)
+        
+        popup.addButtons([okayButton, cancelButton])
+        
+        // Present dialog
+        present(popup, animated: true, completion: nil)
+        
+    }
     
     @IBAction func huntButtonPressed(_ sender: Any) {
         guard let hint = gameTracker?.currentHint else {
