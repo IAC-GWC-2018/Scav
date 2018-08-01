@@ -1,0 +1,6 @@
+framework module Pods_Scav {
+  umbrella header "Pods-Scav-umbrella.h"
+
+  export *
+  module * { export * }
+}

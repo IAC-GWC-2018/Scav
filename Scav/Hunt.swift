@@ -16,4 +16,5 @@ struct Hunt {
     static func testHunts() -> [Hunt] {
         return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination())]
     }
+
 }

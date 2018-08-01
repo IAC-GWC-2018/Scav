@@ -76,7 +76,9 @@ extension HuntListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("show mapViewController")
+        let hunt = hunts[indexPath.row]
+        let mapVC = HuntMapViewController.create(hunt: hunt)
+        navigationController?.pushViewController(mapVC, animated: true)
     }
     
 }
