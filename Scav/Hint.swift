@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Hint: Hashable {
+struct Hint: Codable {
     let title: String
     let caption: String
     let id: Int
     
-    var hashValue: Int {
-        return id.hashValue
+    enum CodingKeys: String, CodingKey {
+        case title, caption, id
     }
     
     static func testHint() -> [Hint] {
