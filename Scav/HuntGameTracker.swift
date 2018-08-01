@@ -12,7 +12,7 @@ import CoreLocation
 
 protocol HuntGameTrackerDelegate: class {
     func didComplete(hunt: Hunt)
-    func didFind(destintion: Destination)
+    func didFind(destination: Destination)
 }
 
 class HuntGameTracker {
@@ -66,7 +66,7 @@ class HuntGameTracker {
         if currentDestinationIndex == hunt.destinations.count - 1 {
             delegate?.didComplete(hunt: hunt)
         } else {
-            delegate?.didFind(destintion: currentDestination)
+            delegate?.didFind(destination: currentDestination)
             currentDestinationIndex += 1
             currentHintIndex = 0
         }

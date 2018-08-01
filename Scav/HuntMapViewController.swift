@@ -75,34 +75,49 @@ class HuntMapViewController: UIViewController {
     }
     
     private func present(hint: Hint) {
-        let title = "THIS IS THE DIALOG TITLE"
-        let message = "This is the message section of the popup dialog default view"
-        let image = UIImage(named: "pexels-photo-103290")
         
-//        // Create the dialog
-//        let popup = PopupDialog(title: title, message: message, image: image)
-//
-//        // Create buttons
-//        let buttonOne = CancelButton(title: "CANCEL") {
-//            print("You canceled the car dialog.")
-//        }
-//
-//        // This button will not the dismiss the dialog
-//        let buttonTwo = DefaultButton(title: "ADMIRE CAR", dismissOnTap: false) {
-//            print("What a beauty!")
-//        }
-//
-//        let buttonThree = DefaultButton(title: "BUY CAR", height: 60) {
-//            print("Ah, maybe next time :)")
-//        }
+        enum HintPresentation {
+            case previous
+            case next
+        }
         
-        // Add buttons to dialog
-        // Alternatively, you can use popup.addButton(buttonOne)
-        // to add a single button
-//        popup.addButtons([buttonOne, buttonTwo, buttonThree])
-//        
-//        // Present dialog
-//        self.present(popup, animated: true, completion: nil)
+        func updateHint(_ type: HintPresentation, popup: PopupDialog) {
+            var hint: Hint?
+            switch type {
+            case .previous:
+                hint = gameTracker?.previousHint()
+            case .next:
+                hint = gameTracker?.nextHint()
+            }
+            let vc = popup.viewController as? PopupDialogDefaultViewController
+            
+            vc?.titleText = hint?.title
+            vc?.messageText = hint?.caption
+        }
+        
+        
+        // Create the dialog
+        let popup = PopupDialog(title: hint.title, message: hint.caption)
+
+        // Create buttons
+        let okayButton = CancelButton(title: "Okay", action: nil)
+
+        // This button will not the dismiss the dialog
+        
+        
+     
+        let nextHintButton = DefaultButton(title: "Next Hint", dismissOnTap: false) {
+            updateHint(.next, popup: popup)
+        }
+
+        let previousHintButton = DefaultButton(title: "Previous Hint", dismissOnTap: false) {
+            updateHint(.previous, popup: popup)
+        }
+        
+        popup.addButtons([okayButton, nextHintButton, previousHintButton])
+        
+        // Present dialog
+        present(popup, animated: true, completion: nil)
     }
 }
 
@@ -111,7 +126,7 @@ extension HuntMapViewController: HuntGameTrackerDelegate {
         
     }
     
-    func didFind(destintion: Destination) {
+    func didFind(destination: Destination) {
         
     }
     
