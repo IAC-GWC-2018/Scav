@@ -18,6 +18,9 @@
 		E2225E5E210B8404002C706D /* Hunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E5D210B8404002C706D /* Hunt.swift */; };
 		E2225E60210B8412002C706D /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E5F210B8412002C706D /* Destination.swift */; };
 		E2225E62210B841F002C706D /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E61210B841F002C706D /* Hint.swift */; };
+		E2225E64210BA8D3002C706D /* HuntNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E63210BA8D3002C706D /* HuntNetworkManager.swift */; };
+		E2225E68210BCD75002C706D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E67210BCD75002C706D /* Location.swift */; };
+		E2225E6A211220A1002C706D /* JSON+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2225E69211220A1002C706D /* JSON+Parsing.swift */; };
 		E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */; };
 		E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */; };
 		E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B72E2020FFADB90039703A /* HuntNavigationController.swift */; };
@@ -38,6 +41,9 @@
 		E2225E5D210B8404002C706D /* Hunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunt.swift; sourceTree = "<group>"; };
 		E2225E5F210B8412002C706D /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		E2225E61210B841F002C706D /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
+		E2225E63210BA8D3002C706D /* HuntNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntNetworkManager.swift; sourceTree = "<group>"; };
+		E2225E67210BCD75002C706D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E2225E69211220A1002C706D /* JSON+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Parsing.swift"; sourceTree = "<group>"; };
 		E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListTableViewCell.swift; sourceTree = "<group>"; };
 		E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntListTableViewCell.xib; sourceTree = "<group>"; };
 		E2B72E2020FFADB90039703A /* HuntNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntNavigationController.swift; sourceTree = "<group>"; };
@@ -83,13 +89,16 @@
 				FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */,
 				FC384C8A20F6713200F4C60A /* Info.plist */,
 				E21431D220F67F2F00531E96 /* HuntListViewController.swift */,
+				E2225E63210BA8D3002C706D /* HuntNetworkManager.swift */,
 				E2B72E2020FFADB90039703A /* HuntNavigationController.swift */,
 				E21431D320F67F2F00531E96 /* HuntListViewController.xib */,
 				E225074B20F69ABF005D6103 /* HuntListTableViewCell.swift */,
 				E225074C20F69ABF005D6103 /* HuntListTableViewCell.xib */,
 				E2225E5D210B8404002C706D /* Hunt.swift */,
 				E2225E5F210B8412002C706D /* Destination.swift */,
+				E2225E69211220A1002C706D /* JSON+Parsing.swift */,
 				E2225E61210B841F002C706D /* Hint.swift */,
+				E2225E67210BCD75002C706D /* Location.swift */,
 				B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */,
 				B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */,
 				45D425D8210B9623003CF06D /* HuntLocationViewController.xib */,
@@ -180,11 +189,14 @@
 				E2B72E2120FFADB90039703A /* HuntNavigationController.swift in Sources */,
 				E225074D20F69ABF005D6103 /* HuntListTableViewCell.swift in Sources */,
 				E2225E60210B8412002C706D /* Destination.swift in Sources */,
+				E2225E68210BCD75002C706D /* Location.swift in Sources */,
+				E2225E6A211220A1002C706D /* JSON+Parsing.swift in Sources */,
 				E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */,
 				E2225E62210B841F002C706D /* Hint.swift in Sources */,
 				E2225E5E210B8404002C706D /* Hunt.swift in Sources */,
 				45D425DE210BA74A003CF06D /* myLocationsView.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
+				E2225E64210BA8D3002C706D /* HuntNetworkManager.swift in Sources */,
 				B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
