@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-struct Destination: Hashable, Codable {
+struct Destination: Codable {
     let title: String
     let location: Location
     let hints: [Hint]
@@ -19,12 +19,8 @@ struct Destination: Hashable, Codable {
         case title, location, hints, id
     }
     
-    var hashValue: Int {
-        return id.hashValue
-    }
-    
     static func testDestination() -> [Destination] {
-        return [Destination(title: "destination0", location: Location(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
+        return [Destination(title: "destination0", location: Location(latitude: 88.0, longitude: 88.0, id: 0), hints: Hint.testHint(), id: 0)]
     }
 }
 
