@@ -13,7 +13,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntCreationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
-                <outlet property="Add" destination="y2t-kT-5jh" id="5za-sz-8cx"/>
                 <outlet property="stackView" destination="a57-Bf-lnf" id="obN-mx-pKq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,9 +28,6 @@
                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6c-lu-5OB">
                             <rect key="frame" x="16" y="8" width="34" height="30"/>
                             <state key="normal" title="Back"/>
-                            <connections>
-                                <action selector="dismissButtonTapped:" destination="-1" eventType="touchUpInside" id="sma-42-n3K"/>
-                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaK-1u-HVd">
                             <rect key="frame" x="286" y="181" width="25" height="30"/>
