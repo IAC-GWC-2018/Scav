@@ -50,7 +50,7 @@ class HuntNetworkManager {
         private var body: Data? {
             switch  self {
             case .createHunt(let hunt):
-                return hunt.toData()
+                return hunt.serialize()
             default:
                 return nil
             }

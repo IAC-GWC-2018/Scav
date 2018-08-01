@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import MapKit
 
-struct HuntLocation: Hashable, Codable {
+struct Location: Codable {
     let latitude: Double
     let longitude: Double
+    let id: Int
+    
+    var clLocation: CLLocation {
+        return CLLocation(latitude, longitude)
+    }
     
     enum CodingKeys: String, CodingKey {
-        case latitude, longitude
+        case latitude, longitude, id
     }
 }

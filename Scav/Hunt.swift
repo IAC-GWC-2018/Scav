@@ -12,9 +12,10 @@ struct Hunt: Codable {
     let title: String
     let description: String
     let destinations: [Destination]
+    let id: Int
     
     enum CodingKeys: String, CodingKey {
-        case title, description, destinations
+        case title, description, destinations, id
     }
         
     static func getHunts(completion: (([Hunt], Error?) -> Void)) {
@@ -29,11 +30,7 @@ struct Hunt: Codable {
     }
     
     static func testHunts() -> [Hunt] {
-        return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination())]
-    }
-    
-    func toData() -> Data {
-        return Data()
+        return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination(), id: 0)]
     }
     
 }

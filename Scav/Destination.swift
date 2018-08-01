@@ -11,7 +11,7 @@ import MapKit
 
 struct Destination: Hashable, Codable {
     let title: String
-    let location: HuntLocation
+    let location: Location
     let hints: [Hint]
     let id: Int
     
@@ -24,7 +24,7 @@ struct Destination: Hashable, Codable {
     }
     
     static func testDestination() -> [Destination] {
-        return [Destination(title: "destination0", location: HuntLocation(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
+        return [Destination(title: "destination0", location: Location(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
     }
 }
 
