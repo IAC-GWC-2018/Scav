@@ -110,22 +110,19 @@ class HuntMapViewController: UIViewController {
             case .next:
                 hint = gameTracker?.nextHint()
             }
-            let vc = popup.viewController as? PopupDialogDefaultViewController
             
-            vc?.titleText = hint?.title
-            vc?.messageText = hint?.caption
+            if let hint = hint {
+                let vc = popup.viewController as? PopupDialogDefaultViewController
+                
+                vc?.titleText = hint.title
+                vc?.messageText = hint.caption
+            }
         }
         
         
-        // Create the dialog
         let popup = PopupDialog(title: hint.title, message: hint.caption, tapGestureDismissal: false)
 
-        // Create buttons
         let okayButton = CancelButton(title: "Okay", action: nil)
-
-        // This button will not the dismiss the dialog
-        
-        
      
         let nextHintButton = DefaultButton(title: "Next Hint", dismissOnTap: false) {
             updateHint(.next, popup: popup)
