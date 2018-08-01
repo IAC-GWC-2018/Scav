@@ -1,5 +1,5 @@
 //
-//  HuntLocation.swift
+//  Location.swift
 //  Scav
 //
 //  Created by Mayki Hu on 7/27/18.
@@ -15,7 +15,7 @@ struct Location: Codable {
     let id: Int
     
     var clLocation: CLLocation {
-        return CLLocation(latitude, longitude)
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
     
     enum CodingKeys: String, CodingKey {
