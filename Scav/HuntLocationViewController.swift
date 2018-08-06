@@ -13,9 +13,39 @@ class HuntLocationViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var locationTitleTextField: UITextField!
+    
+    @IBOutlet weak var hintTextField: UITextField!
+    
+    @IBOutlet weak var addHintButton: UIButton!
+    
+    @IBOutlet weak var stackView: UIStackView!
+    
+    @IBAction func hintButtonTapped(_ sender:
+        UIButton) {
+        addHint()
+    }
+    
+    
+    private func addHint() {
+        if let hintText = hintTextField.text {
+            hints.append(hintText)
+            let hintLabel = UILabel()
+            hintLabel.text = hintText
+            stackView.addArrangedSubview(hintLabel)
+        }
+    }
+    
     static func create() -> HuntLocationViewController {
         return HuntLocationViewController(nibName: String(describing: self.self), bundle: nil)
     }
+    
+    private var selectedLocation: Location?
+    private var locationTitle: String? {
+        return locationTitleTextField.text
+    }
+    
+    private var hints = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +66,11 @@ class HuntLocationViewController: UIViewController {
         annotation.coordinate = pointedCoordinate
         annotation.title = "Location"
         mapView.addAnnotation(annotation)
+    }
+    
+    @IBAction func back (_ sender:
+        UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     

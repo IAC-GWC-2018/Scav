@@ -13,6 +13,8 @@ class HuntCreationViewController: UIViewController {
     
     @IBOutlet weak var add: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     static func create() -> HuntCreationViewController {
         return HuntCreationViewController(nibName: String(describing: self.self), bundle: nil)
     }
@@ -26,6 +28,7 @@ class HuntCreationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func buttonTapped(_ sender:
         UIButton) {
         showHuntLocation()
@@ -37,8 +40,12 @@ class HuntCreationViewController: UIViewController {
         present(creationVC, animated: true)
     }
     
-    
-    
+    @IBAction func back (_ sender:
+    UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+   
     
     
 /*
