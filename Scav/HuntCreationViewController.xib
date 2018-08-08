@@ -13,9 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntCreationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
                 <outlet property="add" destination="bt2-hf-iHi" id="zsq-nh-GFe"/>
+                <outlet property="backButton" destination="nVY-UC-Uw9" id="vtJ-al-8nQ"/>
                 <outlet property="locationNumLabel" destination="h7G-zT-Y1D" id="rnS-iq-4s5"/>
                 <outlet property="locationTableView" destination="jEM-he-Wpo" id="uQw-aP-fQb"/>
-                <outlet property="backButton" destination="nVY-UC-Uw9" id="vtJ-al-8nQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -67,7 +67,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3YV-PI-lGG"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Save Hunt"/>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-he-Wpo">
                     <rect key="frame" x="64" y="414" width="247" height="113"/>

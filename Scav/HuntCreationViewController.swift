@@ -96,11 +96,6 @@ extension HuntCreationViewController: UITableViewDataSource {
         let location = destinations[indexPath.row]
         cell.cellLocationTextLabel.text = (String) (indexPath.row + 1)
         cell.cellLocationNameLabel.text = location.title
-        print("latlong")
-        print(location.location.latitude)
-        print(location.location.longitude)
-        print("hints")
-        print(location.hints)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -69,10 +69,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeL-Hk-lR0">
-                    <rect key="frame" x="268" y="20" width="104" height="30"/>
-                    <state key="normal" title="Add Location +"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-rj-7T8">
                     <rect key="frame" x="7" y="20" width="34" height="30"/>
                     <state key="normal" title="Back"/>
@@ -110,7 +106,6 @@
                 <constraint firstItem="AUQ-ey-ySc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="1Ym-jL-GQT"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="2Yp-Dc-3ah"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="3tx-dD-Qhc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DeL-Hk-lR0" secondAttribute="trailing" constant="3" id="5f0-m2-7SX"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="8jX-qS-kQE"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8qa-f7-Kbf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4oV-yd-eho" secondAttribute="trailing" constant="64" id="9GI-c1-M2y"/>
@@ -120,7 +115,6 @@
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="GwJ-UO-ccH"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KLc-4U-Jes"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvl-Ic-aaf" secondAttribute="trailing" constant="64" id="ODI-pY-eok"/>
-                <constraint firstItem="DeL-Hk-lR0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RUf-J8-Qs2"/>
                 <constraint firstItem="4oV-yd-eho" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="Tpm-6u-v0Y"/>
                 <constraint firstItem="Kf5-QI-qYf" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="16" id="Tun-Dq-FGj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4oV-yd-eho" secondAttribute="bottom" constant="7" id="b5V-xs-ERe"/>
@@ -130,7 +124,6 @@
                 <constraint firstItem="HJH-rj-7T8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gFl-Kb-ibL"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="hGs-Lg-6vq"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m5c-7F-vgI"/>
-                <constraint firstItem="HJH-rj-7T8" firstAttribute="centerY" secondItem="DeL-Hk-lR0" secondAttribute="centerY" id="nMX-uy-Ck3"/>
                 <constraint firstItem="Fz4-IX-AlN" firstAttribute="centerY" secondItem="fYO-jm-8Yv" secondAttribute="centerY" id="ohO-HX-w7m"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="qI7-cp-cQO"/>
                 <constraint firstItem="Kf5-QI-qYf" firstAttribute="leading" secondItem="ATe-7p-Tg9" secondAttribute="trailing" constant="46" id="qxt-ay-kLN"/>

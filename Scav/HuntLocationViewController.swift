@@ -89,8 +89,6 @@ class HuntLocationViewController: UIViewController {
     func checkLocationReqs(sender: AnyObject) {
         if (titleTextField.text?.isEmpty)! || (hints.count < 1) || (mapView.annotations.count < 1) {
             styleSaveLocationButton()
-            print(hints.count)
-            print(mapView.annotations.count)
         } else {
             saveLocationButton.layer.backgroundColor = UIColor.blue.cgColor
             saveLocationButton.isEnabled = true;
