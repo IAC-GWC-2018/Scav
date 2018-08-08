@@ -14,13 +14,12 @@ struct Destination: Codable {
     let location: Location
     let hints: [Hint]
     let id: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case title, location, hints, id
     }
-    
+
     static func testDestination() -> [Destination] {
-        return [Destination(title: "destination0", location: Location(latitude: 88.0, longitude: 88.0, id: 0), hints: Hint.testHint(), id: 0)]
+        return [Destination(title: "destination0", location: Location(latitude: 40.8888697, longitude: -74.2595486, id: 12), hints: Hint.testHint(), id: 0),Destination(title: "destination0", location: Location(latitude: 40.70251, longitude: -74.0169086, id: 11), hints: Hint.testHint(), id: 1)]
     }
 }
-

@@ -13,24 +13,23 @@ struct Hunt: Codable {
     let description: String
     let destinations: [Destination]
     let id: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case title, description, destinations, id
     }
-        
+
     static func getHunts(completion: (([Hunt], Error?) -> Void)) {
-        
+
         HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
             if (error != nil) {
                 print(error!)
             }
         }
-        
-        
+
+
     }
-    
+
     static func testHunts() -> [Hunt] {
         return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination(), id: 0)]
     }
-    
 }

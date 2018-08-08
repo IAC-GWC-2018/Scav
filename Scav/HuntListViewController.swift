@@ -49,7 +49,7 @@ class HuntListViewController: UIViewController {
         let creationVC = HuntCreationViewController.create()
         present(creationVC, animated: true)
     }
-    
+
 
         // Do any additional setup if required.
 
@@ -91,8 +91,13 @@ extension HuntListViewController: UITableViewDataSource {
 
         return cell
     }
+    
+}
 
+extension HuntListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("show mapViewController")
+        let hunt = hunts[indexPath.row]
+        let mapVC = HuntMapViewController.create(hunt: hunt)
+        present(mapVC, animated: true)
     }
 }
