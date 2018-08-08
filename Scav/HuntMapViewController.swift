@@ -114,13 +114,12 @@ class HuntMapViewController: UIViewController {
             if let hint = hint {
                 let vc = popup.viewController as? PopupDialogDefaultViewController
                 
-                vc?.titleText = hint.title
-                vc?.messageText = hint.caption
+                vc?.titleText = hint.description
             }
         }
         
         
-        let popup = PopupDialog(title: hint.title, message: hint.caption, tapGestureDismissal: false)
+        let popup = PopupDialog(title: hint.description, message: "", tapGestureDismissal: false)
 
         let okayButton = CancelButton(title: "Okay", action: nil)
      

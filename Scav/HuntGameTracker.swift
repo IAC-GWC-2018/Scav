@@ -59,7 +59,7 @@ class HuntGameTracker {
     }
     
     func update(userLocation: CLLocation) {
-        guard userLocation.distance(from: currentDestination.location) <= radius else {
+        guard userLocation.distance(from: currentDestination.location.clLocation) <= radius else {
             return
         }
         

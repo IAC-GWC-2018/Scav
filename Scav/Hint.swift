@@ -8,17 +8,16 @@
 
 import Foundation
 
-struct Hint: Hashable {
-    let title: String
-    let caption: String
+struct Hint: Codable {
+    let description: String
     let id: Int
-    
-    var hashValue: Int {
-        return id.hashValue
+
+    enum CodingKeys: String, CodingKey {
+        case description, id
     }
-    
+
     static func testHint() -> [Hint] {
-        return [Hint(title: "1", caption: "This is a hint!", id: 0),
-                Hint(title: "2", caption: "This is another hint!", id: 0)]
+        return [Hint(description: "1", id: 0),
+                Hint(description: "2", id: 0)]
     }
 }
