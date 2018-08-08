@@ -9,18 +9,66 @@
 import UIKit
 import MapKit
 
+protocol AddHuntDestinationDelegate {
+    func add(destination: Destination)
+}
+
 class HuntLocationViewController: UIViewController {
+    
+    private var delegate: AddHuntDestinationDelegate?
+    
+    private var locationNum: String?
     
     @IBOutlet weak var mapView: MKMapView!
     
-    static func create() -> HuntLocationViewController {
-        return HuntLocationViewController(nibName: String(describing: self.self), bundle: nil)
+    @IBOutlet weak var locationNumLabel: UILabel!
+    
+    @IBOutlet weak var saveLocationButton: UIButton!
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    @IBOutlet weak var hintTextField: UITextField!
+    
+    static func create(creationVC: HuntCreationViewController) -> HuntLocationViewController {
+        let huntLocationVC = HuntLocationViewController(nibName: String(describing: self.self), bundle: nil)
+        huntLocationVC.delegate = creationVC
+        huntLocationVC.locationNum = creationVC.getLocationNum()
+        return huntLocationVC
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let press = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
         mapView.addGestureRecognizer(press)
+        displayLocationNum()
+        styleSaveLocationButton()
+    }
+    
+    func styleSaveLocationButton() {
+        saveLocationButton.layer.borderWidth = 2
+        saveLocationButton.layer.borderColor = UIColor.clear.cgColor
+        saveLocationButton.layer.cornerRadius = 8
+        saveLocationButton.layer.backgroundColor = UIColor.lightGray.cgColor
+        saveLocationButton.isEnabled = false
+    }
+    
+    func checkLocationReqs(sender: AnyObject) {
+        if (titleTextField.text?.isEmpty)! || (hintTextField.text?.isEmpty)! {
+            styleSaveLocationButton()
+        } else {
+            saveLocationButton.layer.backgroundColor = UIColor.blue.cgColor
+            saveLocationButton.isEnabled = true;
+        }
+    }
+    
+    @IBAction func textFieldDidBeginEditing(_ textField: UITextField) {
+        checkLocationReqs(sender: textField)
+    }
+    
+    @IBAction func buttonTapped(_ sender:
+        UIButton) {
+        delegate?.add(destination: Destination(title: titleTextField.text!, location: Location(latitude: 8, longitude: 8, id: 8), hints: [Hint(description: "hint", id: 8)], id: 8))
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func handleLongPress (gestureRecognizer: UILongPressGestureRecognizer) {
@@ -37,13 +85,11 @@ class HuntLocationViewController: UIViewController {
         annotation.title = "Location"
         mapView.addAnnotation(annotation)
     }
-    
-    
-    
 
-
+    func displayLocationNum() {
+        locationNumLabel.text = "Location #" + locationNum!
+    }
     
-
     /*
     // MARK: - Navigation
 

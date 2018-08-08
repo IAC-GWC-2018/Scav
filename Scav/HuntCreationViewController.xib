@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntCreationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
                 <outlet property="add" destination="bt2-hf-iHi" id="zsq-nh-GFe"/>
+                <outlet property="locationNumLabel" destination="h7G-zT-Y1D" id="rnS-iq-4s5"/>
+                <outlet property="locationTableView" destination="jEM-he-Wpo" id="uQw-aP-fQb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -73,6 +75,12 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Location #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7G-zT-Y1D">
+                    <rect key="frame" x="64" y="340" width="116" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -97,7 +105,9 @@
                 <constraint firstItem="nVY-UC-Uw9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="bC1-iQ-YRL"/>
                 <constraint firstItem="Ijg-Xt-d7x" firstAttribute="leading" secondItem="PZV-9r-ZLH" secondAttribute="leading" id="d5d-74-TZh"/>
                 <constraint firstItem="Ijg-Xt-d7x" firstAttribute="top" secondItem="A1g-JM-gQo" secondAttribute="bottom" constant="16" id="dW6-u0-kWS"/>
+                <constraint firstItem="iSf-ua-yrz" firstAttribute="top" secondItem="h7G-zT-Y1D" secondAttribute="bottom" constant="8" id="fYb-qx-KRo"/>
                 <constraint firstItem="jEM-he-Wpo" firstAttribute="top" secondItem="bt2-hf-iHi" secondAttribute="bottom" constant="20" id="jJl-KE-0vb"/>
+                <constraint firstItem="h7G-zT-Y1D" firstAttribute="leading" secondItem="iSf-ua-yrz" secondAttribute="leading" id="kDB-5Y-rtG"/>
                 <constraint firstItem="nVY-UC-Uw9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="l5L-SY-6oK"/>
                 <constraint firstItem="v19-RN-c3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="mNA-my-l9o"/>
                 <constraint firstItem="iSf-ua-yrz" firstAttribute="leading" secondItem="PZV-9r-ZLH" secondAttribute="leading" id="ngk-QP-ayF"/>

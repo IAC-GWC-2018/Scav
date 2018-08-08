@@ -12,7 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntLocationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
+                <outlet property="hintTextField" destination="fYO-jm-8Yv" id="JqV-vK-1D3"/>
+                <outlet property="locationNumLabel" destination="ATe-7p-Tg9" id="h8b-Fc-vOd"/>
                 <outlet property="mapView" destination="YYb-Sf-Qe8" id="G04-Rk-DDy"/>
+                <outlet property="saveLocationButton" destination="Kf5-QI-qYf" id="JQC-mz-Urk"/>
+                <outlet property="titleTextField" destination="Mvl-Ic-aaf" id="614-OU-EDG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +34,9 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="xZs-w5-d1T"/>
+                    </connections>
                 </textField>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Nv-UX6">
                     <rect key="frame" x="64" y="535" width="247" height="102"/>
@@ -37,8 +44,8 @@
                         <constraint firstAttribute="height" constant="102" id="88v-OT-PbT"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUQ-ey-ySc">
-                    <rect key="frame" x="64" y="399" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUQ-ey-ySc">
+                    <rect key="frame" x="64" y="399" width="34" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -48,6 +55,9 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="GGP-aT-Vcj"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oj-Ey-dys">
                     <rect key="frame" x="64" y="470" width="31.5" height="20.5"/>
@@ -59,6 +69,22 @@
                     <rect key="frame" x="329" y="504" width="30" height="30"/>
                     <state key="normal" title="+"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-7p-Tg9">
+                    <rect key="frame" x="64" y="374" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-QI-qYf">
+                    <rect key="frame" x="191" y="382" width="112" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="  Save Location  ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="vex-K2-qNJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -68,8 +94,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cYa-Nv-UX6" secondAttribute="trailing" constant="64" id="3fS-MP-fMm"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="3tx-dD-Qhc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cYa-Nv-UX6" secondAttribute="bottom" constant="30" id="4OD-B7-MKT"/>
+                <constraint firstItem="AUQ-ey-ySc" firstAttribute="top" secondItem="ATe-7p-Tg9" secondAttribute="bottom" constant="4" id="5Yn-BJ-2EG"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="8jX-qS-kQE"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8qa-f7-Kbf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kf5-QI-qYf" secondAttribute="trailing" constant="64" id="9Wv-04-FZq"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="GwJ-UO-ccH"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KLc-4U-Jes"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvl-Ic-aaf" secondAttribute="trailing" constant="64" id="ODI-pY-eok"/>
@@ -79,10 +107,12 @@
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="top" secondItem="AUQ-ey-ySc" secondAttribute="bottom" constant="8" id="c6N-0f-rCP"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="hGs-Lg-6vq"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m5c-7F-vgI"/>
+                <constraint firstItem="Kf5-QI-qYf" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="16" id="o9D-Wi-3J7"/>
                 <constraint firstItem="Fz4-IX-AlN" firstAttribute="centerY" secondItem="fYO-jm-8Yv" secondAttribute="centerY" id="ohO-HX-w7m"/>
                 <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="pTO-e8-ph7"/>
                 <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="peT-zi-Wdd"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="qI7-cp-cQO"/>
+                <constraint firstItem="ATe-7p-Tg9" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="wgd-y0-8Hn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fz4-IX-AlN" secondAttribute="trailing" constant="16" id="y8r-qi-8RE"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="top" secondItem="Mvl-Ic-aaf" secondAttribute="bottom" constant="12" id="z18-Q6-qgF"/>
             </constraints>
