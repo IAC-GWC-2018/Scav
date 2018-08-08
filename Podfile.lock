@@ -1,24 +1,28 @@
 PODS:
   - DynamicBlurView (2.0.2)
   - Gifu (3.1.0)
+  - GiphyCoreSDK (1.2.0)
   - PopupDialog (0.8.0):
     - DynamicBlurView (~> 2.0)
 
 DEPENDENCIES:
   - Gifu
+  - GiphyCoreSDK
   - PopupDialog (~> 0.8)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DynamicBlurView
     - Gifu
+    - GiphyCoreSDK
     - PopupDialog
 
 SPEC CHECKSUMS:
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   Gifu: fd1e9e3a15ac5d90bae0a510e4ed9f94b485ab03
+  GiphyCoreSDK: 1278bfc2dbdc9f1b2b1703ee70224f515b9530a6
   PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
 
-PODFILE CHECKSUM: f633166d72d034a1ba567bb93819022d0b2e9286
+PODFILE CHECKSUM: c26e1b273d6029375980b81852bb1f712b88d4f2
 
 COCOAPODS: 1.5.3

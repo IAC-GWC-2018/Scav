@@ -8,6 +8,7 @@
 
 import UIKit
 import Gifu
+import GiphyCoreSDK
 
 protocol CompletedHuntDismissalDelegate: class {
     func dismiss()
@@ -21,6 +22,7 @@ class CompletedHuntViewController: UIViewController {
     @IBOutlet weak var completeButton: UIButton!
     private var hunt: Hunt?
     private weak var delegate: CompletedHuntDismissalDelegate?
+    let giphy = GiphyCore.configure(apiKey: "VnuYbTyWtU0w20UvTREyvZNAyvBF59jw")
     
     static func create(hunt: Hunt, delegate: CompletedHuntDismissalDelegate) -> CompletedHuntViewController {
         let vc = CompletedHuntViewController(nibName: String(describing: self.self), bundle: nil)
@@ -39,13 +41,23 @@ class CompletedHuntViewController: UIViewController {
             return
         }
         
-        let message = "Congrats! You've completed \(hunt.title) hunt!"
+        let message = "Congrats! You've completed \(hunt.title)!"
         congratsLabel.text = message
         
         configureTableView()
         configureButton()
+        showGif()
     }
     
+    private func showGif() {
+        GiphyCore.shared.random("congrats") { (response, error) in
+            
+            if let response = response, let data = response.data  {
+                print(response.meta)
+                print(data)
+            }
+        }
+    }
     private func configureTableView() {
         destinationTableView.dataSource = self
         destinationTableView.rowHeight = UITableViewAutomaticDimension

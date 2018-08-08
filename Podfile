@@ -9,5 +9,5 @@ target 'Scav' do
 
   pod 'PopupDialog', '~> 0.8'
   pod 'Gifu'
-
+  pod 'GiphyCoreSDK'
 end
