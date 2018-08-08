@@ -13,6 +13,7 @@
 		14E3FC4420F69A8100DAE40D /* UIViewController+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */; };
 		14E3FC4720F69E3000DAE40D /* UserLocationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */; };
 		14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */; };
+		446F4076211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */; };
 		D8A41068F48A2D02F3CD8461 /* Pods_Scav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C480643E57C10318C09C3D36 /* Pods_Scav.framework */; };
 		E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21431D220F67F2F00531E96 /* HuntListViewController.swift */; };
 		E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21431D320F67F2F00531E96 /* HuntListViewController.xib */; };
@@ -35,6 +36,7 @@
 		14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+XIB.swift"; sourceTree = "<group>"; };
 		14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationAlertViewController.swift; sourceTree = "<group>"; };
 		14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserLocationAlertViewController.xib; sourceTree = "<group>"; };
+		446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20180801_210825.gpx; sourceTree = "<group>"; };
 		99FF36E16514F569B26CF686 /* Pods-Scav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scav.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scav/Pods-Scav.release.xcconfig"; sourceTree = "<group>"; };
 		C480643E57C10318C09C3D36 /* Pods_Scav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21431D220F67F2F00531E96 /* HuntListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntListViewController.swift; sourceTree = "<group>"; };
@@ -64,13 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		144543792112269400D164FC /* PopupDialog */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PopupDialog;
-			sourceTree = "<group>";
-		};
 		48F2ACD39849C5D24815CFD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				FC384C7E20F6713000F4C60A /* AppDelegate.swift */,
-				144543792112269400D164FC /* PopupDialog */,
 				FC384C8520F6713200F4C60A /* Assets.xcassets */,
 				FC384C8720F6713200F4C60A /* LaunchScreen.storyboard */,
 				FC384C8A20F6713200F4C60A /* Info.plist */,
@@ -128,6 +122,7 @@
 				14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */,
 				14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */,
 				14454353210B921600D164FC /* HuntGameTracker.swift */,
+				446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */,
 			);
 			path = Scav;
 			sourceTree = "<group>";
@@ -196,6 +191,7 @@
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */,
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
+				446F4076211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx in Resources */,
 				14E3FC3E20F67F2F00DAE40D /* HuntMapViewController.xib in Resources */,
 				14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */,
 			);
@@ -397,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCVEJM4PFH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Scav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,7 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCVEJM4PFH;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Scav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
