@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="completeButton" destination="YCl-zR-XpP" id="vzY-xc-eGR"/>
                 <outlet property="congratsLabel" destination="g6l-Kw-vJa" id="AYE-gl-QiF"/>
-                <outlet property="destinationTableVIew" destination="bpc-an-Dwo" id="b3c-Nr-lmp"/>
+                <outlet property="destinationTableView" destination="bpc-an-Dwo" id="GAg-uS-0Wx"/>
                 <outlet property="gifImageView" destination="LVZ-Hr-TUF" id="DKK-a9-Ytf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
