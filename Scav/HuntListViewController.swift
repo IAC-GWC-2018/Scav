@@ -12,7 +12,7 @@ class HuntListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var hunts = Hunt.testHunts()
+    var hunts = [Hunt]()
 
     static func create() -> HuntListViewController {
         return self.init(nibName: String(describing: self.self), bundle: nil)
@@ -25,6 +25,25 @@ class HuntListViewController: UIViewController {
         createAddHuntButton()
         self.title = "Hunt List"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "GujaratiSangamMN-Bold", size: 20.0)!]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchHunts()
+    }
+    
+    private func fetchHunts() {
+        HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
+            guard let data = data,
+            let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [AnyHashable: Any] else {
+                    //present alert that there was an error
+                    return
+            }
+            
+            let decoder = JSONDecoder()
+            self.hunts = decoder.parse(from: json) ?? []
+            self.tableView.reloadData()
+        }
     }
 
     private func configureTableView() {

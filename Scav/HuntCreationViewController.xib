@@ -14,8 +14,11 @@
             <connections>
                 <outlet property="add" destination="bt2-hf-iHi" id="zsq-nh-GFe"/>
                 <outlet property="backButton" destination="nVY-UC-Uw9" id="vtJ-al-8nQ"/>
+                <outlet property="huntDescriptionField" destination="Ijg-Xt-d7x" id="igE-6X-Zn0"/>
+                <outlet property="huntTitleField" destination="v19-RN-c3F" id="SCJ-LI-QaO"/>
                 <outlet property="locationNumLabel" destination="h7G-zT-Y1D" id="rnS-iq-4s5"/>
                 <outlet property="locationTableView" destination="jEM-he-Wpo" id="uQw-aP-fQb"/>
+                <outlet property="saveHuntButton" destination="HfV-Sx-1lX" id="hUi-WM-LXr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,12 +27,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v19-RN-c3F">
-                    <rect key="frame" x="64" y="158" width="247" height="30"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1g-JM-gQo">
                     <rect key="frame" x="64" y="246" width="88" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -55,6 +52,9 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingDidEnd" id="777-RW-IAr"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hunt Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-9r-ZLH">
                     <rect key="frame" x="64" y="120" width="75" height="21"/>
@@ -62,12 +62,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v19-RN-c3F">
+                    <rect key="frame" x="64" y="158" width="247" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingDidEnd" id="gYe-MS-Oca"/>
+                    </connections>
+                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-Sx-1lX">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3YV-PI-lGG"/>
                     </constraints>
                     <state key="normal" title="Save Hunt"/>
+                    <connections>
+                        <action selector="saveHunt:" destination="-1" eventType="touchUpInside" id="x9O-7W-k1c"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-he-Wpo">
                     <rect key="frame" x="64" y="414" width="247" height="113"/>
