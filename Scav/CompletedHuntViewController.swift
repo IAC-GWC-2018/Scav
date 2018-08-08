@@ -15,29 +15,31 @@ class CompletedHuntViewController: UIViewController {
     @IBOutlet weak var destinationTableVIew: UITableView!
     @IBOutlet weak var gifImageView: GIFImageView!
     @IBOutlet weak var completeButton: UIButton!
+    private var hunt: Hunt?
+    
+    static func create(hunt: Hunt) -> CompletedHuntViewController {
+        let vc = CompletedHuntViewController(nibName: String(describing: self.self), bundle: nil)
+        vc.hunt = hunt
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    private func configure() {
+        guard let hunt = hunt else {
+            return
+        }
+        
+        let message = "Congrats! You've completed \(hunt.title) hunt!"
+        congratsLabel.text = message
+    }
+    
     @IBAction func completeButtonPress(_ sender: Any) {
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
