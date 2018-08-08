@@ -20,6 +20,6 @@ struct Destination: Hashable {
     }
     
     static func testDestination() -> [Destination] {
-        return [Destination(title: "destination0", location: CLLocation(latitude: 88, longitude: 88), hints: Hint.testHint(), id: 0)]
+        return [Destination(title: "destination0", location: CLLocation(latitude: 40.8888697, longitude: -74.2595486), hints: Hint.testHint(), id: 0),Destination(title: "destination0", location: CLLocation(latitude: 40.70251, longitude: -74.0169086), hints: Hint.testHint(), id: 1)]
     }
 }

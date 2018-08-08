@@ -19,8 +19,6 @@ struct Hint: Hashable {
     
     static func testHint() -> [Hint] {
         return [Hint(title: "1", caption: "This is a hint!", id: 0),
-                Hint(title: "2", caption: "This is another hint!", id: 0),
-                Hint(title: "3", caption: "This is a third hint!", id: 0),
-                Hint(title: "4", caption: "This is a 4th hint!", id: 0)]
+                Hint(title: "2", caption: "This is another hint!", id: 0)]
     }
 }
