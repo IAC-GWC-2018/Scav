@@ -9,15 +9,14 @@
 import Foundation
 
 struct Hint: Codable {
-    let title: String
-    let caption: String
+    let description: String
     let id: Int
     
     enum CodingKeys: String, CodingKey {
-        case title, caption, id
+        case description, id
     }
     
     static func testHint() -> [Hint] {
-        return [Hint(title: "hint0", caption: "hint0 caption", id: 0)]
+        return [Hint(description: "hint0", id: 0)]
     }
 }
