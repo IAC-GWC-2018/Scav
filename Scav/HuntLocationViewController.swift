@@ -17,10 +17,11 @@ class HuntLocationViewController: UIViewController {
     
     private weak var delegate: AddHuntDestinationDelegate?
     
-    private var locationNum: String?
+    private var locationNum: Int?
     
     @IBOutlet weak var mapView: MKMapView!
-    var annotation = MKPointAnnotation()
+    
+    private var annotation = MKPointAnnotation()
     
     @IBOutlet weak var locationTitleTextField: UITextField!
     
@@ -38,11 +39,12 @@ class HuntLocationViewController: UIViewController {
     
     private func addHint() {
         if let hintText = hintTextField.text {
-            hints.append(hintText)
+            hints.append(Hint(description: hintText, id: hints.count + 1))
             let hintLabel = UILabel()
             hintLabel.text = hintText
             stackView.addArrangedSubview(hintLabel)
         }
+        hintTextField.text = ""
     }
     
     @IBOutlet weak var locationNumLabel: UILabel!
@@ -59,11 +61,12 @@ class HuntLocationViewController: UIViewController {
     }
     
     private var selectedLocation: Location?
+    
     private var locationTitle: String? {
         return locationTitleTextField.text
     }
     
-    private var hints = [String]()
+    private var hints = [Hint]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,8 +85,10 @@ class HuntLocationViewController: UIViewController {
     }
     
     func checkLocationReqs(sender: AnyObject) {
-        if (titleTextField.text?.isEmpty)! || (hintTextField.text?.isEmpty)! {
+        if (titleTextField.text?.isEmpty)! || (hints.count < 1) || (mapView.annotations.count < 1) {
             styleSaveLocationButton()
+            print(hints.count)
+            print(mapView.annotations.count)
         } else {
             saveLocationButton.layer.backgroundColor = UIColor.blue.cgColor
             saveLocationButton.isEnabled = true;
@@ -96,7 +101,7 @@ class HuntLocationViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender:
         UIButton) {
-        delegate?.add(destination: Destination(title: titleTextField.text!, location: Location(latitude: 8, longitude: 8, id: 8), hints: [Hint(description: "hint", id: 8)], id: 8))
+        delegate?.add(destination: Destination(title: titleTextField.text!, location: Location(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude, id: locationNum!), hints: hints, id: locationNum!))
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -110,7 +115,6 @@ class HuntLocationViewController: UIViewController {
     
     func addAnnotationOnLocation(pointedCoordinate: CLLocationCoordinate2D) {
         annotation.coordinate = pointedCoordinate
-        annotation.title = "Location"
         mapView.addAnnotation(annotation)
     }
     
@@ -120,7 +124,7 @@ class HuntLocationViewController: UIViewController {
     }
     
     func displayLocationNum() {
-        locationNumLabel.text = "Location #" + locationNum!
+        locationNumLabel.text = "Location #" + String(locationNum!)
     }
     
     /*

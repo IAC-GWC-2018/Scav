@@ -59,7 +59,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     }
 
     func displayLocationNum() {
-        locationNumLabel.text = "Add Location #" + getLocationNum()
+        locationNumLabel.text = "Add Location #" + String(getLocationNum())
     }
     
     @objc private func showHuntLocation() {
@@ -72,8 +72,8 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 
-    func getLocationNum() -> String {
-        return (String) (destinations.count + 1)
+    func getLocationNum() -> Int {
+        return destinations.count + 1
     }
     
      // MARK: - Navigation
@@ -96,6 +96,11 @@ extension HuntCreationViewController: UITableViewDataSource {
         let location = destinations[indexPath.row]
         cell.cellLocationTextLabel.text = (String) (indexPath.row + 1)
         cell.cellLocationNameLabel.text = location.title
+        print("latlong")
+        print(location.location.latitude)
+        print(location.location.longitude)
+        print("hints")
+        print(location.hints)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
