@@ -15,6 +15,7 @@
                 <outlet property="add" destination="bt2-hf-iHi" id="zsq-nh-GFe"/>
                 <outlet property="locationNumLabel" destination="h7G-zT-Y1D" id="rnS-iq-4s5"/>
                 <outlet property="locationTableView" destination="jEM-he-Wpo" id="uQw-aP-fQb"/>
+                <outlet property="backButton" destination="nVY-UC-Uw9" id="vtJ-al-8nQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,6 +39,9 @@
                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVY-UC-Uw9">
                     <rect key="frame" x="10" y="25" width="34" height="30"/>
                     <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="cct-MV-b0H"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-hf-iHi">
                     <rect key="frame" x="271" y="364" width="40" height="30"/>

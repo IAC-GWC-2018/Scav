@@ -26,6 +26,8 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     
     @IBOutlet weak var locationTableView: UITableView!
     
+    @IBOutlet weak var backButton: UIButton!
+    
     static func create() -> HuntCreationViewController {
         return HuntCreationViewController(nibName: String(describing: self.self), bundle: nil)
     }
@@ -50,11 +52,12 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func buttonTapped(_ sender:
         UIButton) {
         showHuntLocation()
     }
-    
+
     func displayLocationNum() {
         locationNumLabel.text = "Add Location #" + getLocationNum()
     }
@@ -63,7 +66,12 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         let locationVC = HuntLocationViewController.create(creationVC: self)
         present(locationVC, animated: true)
     }
-    
+
+    @IBAction func back (_ sender:
+    UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     func getLocationNum() -> String {
         return (String) (destinations.count + 1)
     }

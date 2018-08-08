@@ -20,6 +20,30 @@ class HuntLocationViewController: UIViewController {
     private var locationNum: String?
     
     @IBOutlet weak var mapView: MKMapView!
+    var annotation = MKPointAnnotation()
+    
+    @IBOutlet weak var locationTitleTextField: UITextField!
+    
+    @IBOutlet weak var hintTextField: UITextField!
+    
+    @IBOutlet weak var addHintButton: UIButton!
+    
+    @IBOutlet weak var stackView: UIStackView!
+    
+    @IBAction func hintButtonTapped(_ sender:
+        UIButton) {
+        addHint()
+    }
+    
+    
+    private func addHint() {
+        if let hintText = hintTextField.text {
+            hints.append(hintText)
+            let hintLabel = UILabel()
+            hintLabel.text = hintText
+            stackView.addArrangedSubview(hintLabel)
+        }
+    }
     
     @IBOutlet weak var locationNumLabel: UILabel!
     
@@ -27,14 +51,19 @@ class HuntLocationViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     
-    @IBOutlet weak var hintTextField: UITextField!
-    
     static func create(creationVC: HuntCreationViewController) -> HuntLocationViewController {
         let huntLocationVC = HuntLocationViewController(nibName: String(describing: self.self), bundle: nil)
         huntLocationVC.delegate = creationVC
         huntLocationVC.locationNum = creationVC.getLocationNum()
         return huntLocationVC
     }
+    
+    private var selectedLocation: Location?
+    private var locationTitle: String? {
+        return locationTitleTextField.text
+    }
+    
+    private var hints = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,18 +103,22 @@ class HuntLocationViewController: UIViewController {
     @objc func handleLongPress (gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == UIGestureRecognizerState.began {
             let touchPoint: CGPoint = gestureRecognizer.location(in: mapView)
-            let newCoordinate: CLLocationCoordinate2D = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-            addAnnotationOnLocation(pointedCoordinate: newCoordinate)
+            let currentCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+            addAnnotationOnLocation(pointedCoordinate: currentCoordinate)
         }
     }
     
     func addAnnotationOnLocation(pointedCoordinate: CLLocationCoordinate2D) {
-        let annotation = MKPointAnnotation()
         annotation.coordinate = pointedCoordinate
         annotation.title = "Location"
         mapView.addAnnotation(annotation)
     }
-
+    
+    @IBAction func back (_ sender:
+        UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func displayLocationNum() {
         locationNumLabel.text = "Location #" + locationNum!
     }

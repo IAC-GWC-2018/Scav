@@ -12,11 +12,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntLocationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
-                <outlet property="hintTextField" destination="fYO-jm-8Yv" id="JqV-vK-1D3"/>
+                <outlet property="addHintButton" destination="Fz4-IX-AlN" id="mb8-Pm-ciB"/>
+                <outlet property="hintTextField" destination="fYO-jm-8Yv" id="CPg-Cw-2cs"/>
                 <outlet property="locationNumLabel" destination="ATe-7p-Tg9" id="h8b-Fc-vOd"/>
+                <outlet property="locationTitleTextField" destination="Mvl-Ic-aaf" id="zGA-ZD-IgC"/>
                 <outlet property="mapView" destination="YYb-Sf-Qe8" id="G04-Rk-DDy"/>
                 <outlet property="saveLocationButton" destination="Kf5-QI-qYf" id="JQC-mz-Urk"/>
-                <outlet property="titleTextField" destination="Mvl-Ic-aaf" id="614-OU-EDG"/>
+                <outlet property="stackView" destination="cYa-Nv-UX6" id="Vqw-4B-O2y"/>
+                <outlet property="titleTextField" destination="Mvl-Ic-aaf" id="y74-gV-mWY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,17 +38,24 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="xZs-w5-d1T"/>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="165-iD-qsh"/>
                     </connections>
                 </textField>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Nv-UX6">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Nv-UX6">
                     <rect key="frame" x="64" y="535" width="247" height="102"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="102" id="88v-OT-PbT"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUQ-ey-ySc">
-                    <rect key="frame" x="64" y="399" width="34" height="21"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-IX-AlN">
+                    <rect key="frame" x="329" y="504" width="30" height="30"/>
+                    <state key="normal" title="+"/>
+                    <connections>
+                        <action selector="hintButtonTapped:" destination="-1" eventType="touchUpInside" id="2A7-M5-Mua"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUQ-ey-ySc">
+                    <rect key="frame" x="64" y="399" width="103" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -56,7 +66,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="GGP-aT-Vcj"/>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="ItD-pT-aVf"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oj-Ey-dys">
@@ -65,18 +75,26 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-IX-AlN">
-                    <rect key="frame" x="329" y="504" width="30" height="30"/>
-                    <state key="normal" title="+"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeL-Hk-lR0">
+                    <rect key="frame" x="268" y="20" width="104" height="30"/>
+                    <state key="normal" title="Add Location +"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-7p-Tg9">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJH-rj-7T8">
+                    <rect key="frame" x="7" y="20" width="34" height="30"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="ulD-Q8-rMl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-7p-Tg9">
                     <rect key="frame" x="64" y="374" width="81" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-QI-qYf">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf5-QI-qYf">
                     <rect key="frame" x="191" y="382" width="112" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="  Save Location  ">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,20 +112,22 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cYa-Nv-UX6" secondAttribute="trailing" constant="64" id="3fS-MP-fMm"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="3tx-dD-Qhc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cYa-Nv-UX6" secondAttribute="bottom" constant="30" id="4OD-B7-MKT"/>
-                <constraint firstItem="AUQ-ey-ySc" firstAttribute="top" secondItem="ATe-7p-Tg9" secondAttribute="bottom" constant="4" id="5Yn-BJ-2EG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DeL-Hk-lR0" secondAttribute="trailing" constant="3" id="5f0-m2-7SX"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="8jX-qS-kQE"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8qa-f7-Kbf"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kf5-QI-qYf" secondAttribute="trailing" constant="64" id="9Wv-04-FZq"/>
+                <constraint firstItem="HJH-rj-7T8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="7" id="Fxr-J6-u6I"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="GwJ-UO-ccH"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KLc-4U-Jes"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvl-Ic-aaf" secondAttribute="trailing" constant="64" id="ODI-pY-eok"/>
+                <constraint firstItem="DeL-Hk-lR0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RUf-J8-Qs2"/>
                 <constraint firstItem="cYa-Nv-UX6" firstAttribute="top" secondItem="fYO-jm-8Yv" secondAttribute="bottom" constant="1" id="Uv7-dU-y6l"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYO-jm-8Yv" secondAttribute="trailing" constant="64" id="bHt-iM-Tmq"/>
                 <constraint firstItem="AUQ-ey-ySc" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="33" id="bvH-0W-MwQ"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="top" secondItem="AUQ-ey-ySc" secondAttribute="bottom" constant="8" id="c6N-0f-rCP"/>
+                <constraint firstItem="HJH-rj-7T8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gFl-Kb-ibL"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="hGs-Lg-6vq"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m5c-7F-vgI"/>
-                <constraint firstItem="Kf5-QI-qYf" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="16" id="o9D-Wi-3J7"/>
+                <constraint firstItem="HJH-rj-7T8" firstAttribute="centerY" secondItem="DeL-Hk-lR0" secondAttribute="centerY" id="nMX-uy-Ck3"/>
                 <constraint firstItem="Fz4-IX-AlN" firstAttribute="centerY" secondItem="fYO-jm-8Yv" secondAttribute="centerY" id="ohO-HX-w7m"/>
                 <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="pTO-e8-ph7"/>
                 <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="peT-zi-Wdd"/>

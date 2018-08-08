@@ -50,6 +50,7 @@ class HuntListViewController: UIViewController {
         let creationVC = HuntCreationViewController.create()
         present(creationVC, animated: true)
     }
+    
 
         // Do any additional setup if required.
 
