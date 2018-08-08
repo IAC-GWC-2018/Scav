@@ -9,13 +9,13 @@
 import UIKit
 import MapKit
 
-protocol AddHuntDestinationDelegate {
+protocol AddHuntDestinationDelegate: class {
     func add(destination: Destination)
 }
 
 class HuntLocationViewController: UIViewController {
     
-    private var delegate: AddHuntDestinationDelegate?
+    private weak var delegate: AddHuntDestinationDelegate?
     
     private var locationNum: String?
     
