@@ -141,7 +141,7 @@ class HuntMapViewController: UIViewController {
 
 extension HuntMapViewController: HuntGameTrackerDelegate {
     func didComplete(hunt: Hunt) {
-       
+        
     }
     
     func didFind(destination: Destination) {

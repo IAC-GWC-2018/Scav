@@ -8,5 +8,6 @@ target 'Scav' do
   # Pods for Scav
 
   pod 'PopupDialog', '~> 0.8'
+  pod 'Gifu'
 
 end
