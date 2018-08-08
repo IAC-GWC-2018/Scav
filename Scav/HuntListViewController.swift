@@ -20,6 +20,7 @@ class HuntListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        present(CompletedHuntViewController(), animated: true, completion: nil)
         // Do any additional setup after loading the view.
         configureTableView()
         createAddHuntButton()
