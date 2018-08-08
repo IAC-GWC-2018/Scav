@@ -141,11 +141,17 @@ class HuntMapViewController: UIViewController {
 
 extension HuntMapViewController: HuntGameTrackerDelegate {
     func didComplete(hunt: Hunt) {
-        
+       
     }
     
     func didFind(destination: Destination) {
+        let popup = PopupDialog(title: "You found the destination!" , message: destination.title)
         
+        let button = DefaultButton(title: "Next Destination", action: nil)
+        
+        popup.addButtons([button])
+        
+        self.present(popup, animated: true, completion: nil)
     }
     
 }
