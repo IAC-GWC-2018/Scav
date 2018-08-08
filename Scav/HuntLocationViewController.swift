@@ -19,6 +19,8 @@ class HuntLocationViewController: UIViewController {
     
     private var locationNum: String?
     
+    private var hints = [Hint]()
+    
     @IBOutlet weak var mapView: MKMapView!
     var annotation = MKPointAnnotation()
     
@@ -35,13 +37,14 @@ class HuntLocationViewController: UIViewController {
         addHint()
     }
     
+    @IBOutlet weak var hintTableView: UITableView!
     
     private func addHint() {
         if let hintText = hintTextField.text {
-            hints.append(hintText)
+            hints.append(Hint(description: hintText, id: hints.count))
             let hintLabel = UILabel()
             hintLabel.text = hintText
-            stackView.addArrangedSubview(hintLabel)
+            hintTableView.insertRows(at: [IndexPath(row: hints.count - 1, section: 0)], with: .automatic)
         }
     }
     
@@ -63,14 +66,13 @@ class HuntLocationViewController: UIViewController {
         return locationTitleTextField.text
     }
     
-    private var hints = [String]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let press = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
         mapView.addGestureRecognizer(press)
         displayLocationNum()
         styleSaveLocationButton()
+        configureTableView()
     }
     
     func styleSaveLocationButton() {
@@ -132,5 +134,37 @@ class HuntLocationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    private func configureTableView() {
+        hintTableView.dataSource = (self as UITableViewDataSource)
+        hintTableView.delegate = self as? UITableViewDelegate
+        hintTableView.rowHeight = UITableViewAutomaticDimension
+        hintTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        hintTableView.register(UINib(nibName: String(describing: HuntCreationLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntCreationLocationTableViewCell.self))
+    }
+
 
 }
+
+extension HuntLocationViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return hints.count
+    }
+    
+    private func insertLocationData(_ cell: HuntCreationLocationTableViewCell, cellForRowAt indexPath: IndexPath) {
+        let hint = hints[indexPath.row]
+        cell.cellLocationTextLabel.text = (String) (indexPath.row + 1)
+        cell.cellLocationNameLabel.text = hint.description
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HuntCreationLocationTableViewCell.self)) as? HuntCreationLocationTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        insertLocationData(cell, cellForRowAt: indexPath)
+        
+        return cell
+    }
+}
+
+

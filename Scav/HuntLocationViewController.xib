@@ -13,12 +13,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntLocationViewController" customModule="Scav" customModuleProvider="target">
             <connections>
                 <outlet property="addHintButton" destination="Fz4-IX-AlN" id="mb8-Pm-ciB"/>
+                <outlet property="hintTableView" destination="4oV-yd-eho" id="5s2-u0-ahT"/>
                 <outlet property="hintTextField" destination="fYO-jm-8Yv" id="CPg-Cw-2cs"/>
                 <outlet property="locationNumLabel" destination="ATe-7p-Tg9" id="h8b-Fc-vOd"/>
                 <outlet property="locationTitleTextField" destination="Mvl-Ic-aaf" id="zGA-ZD-IgC"/>
                 <outlet property="mapView" destination="YYb-Sf-Qe8" id="G04-Rk-DDy"/>
                 <outlet property="saveLocationButton" destination="Kf5-QI-qYf" id="JQC-mz-Urk"/>
-                <outlet property="stackView" destination="cYa-Nv-UX6" id="Vqw-4B-O2y"/>
                 <outlet property="titleTextField" destination="Mvl-Ic-aaf" id="y74-gV-mWY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,12 +41,6 @@
                         <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="165-iD-qsh"/>
                     </connections>
                 </textField>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Nv-UX6">
-                    <rect key="frame" x="64" y="535" width="247" height="102"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="102" id="88v-OT-PbT"/>
-                    </constraints>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-IX-AlN">
                     <rect key="frame" x="329" y="504" width="30" height="30"/>
                     <state key="normal" title="+"/>
@@ -102,26 +96,34 @@
                         <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="vex-K2-qNJ"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4oV-yd-eho">
+                    <rect key="frame" x="64" y="542" width="247" height="118"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="118" id="UgS-zH-3h8"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="top" secondItem="5oj-Ey-dys" secondAttribute="bottom" constant="13.5" id="1D4-Yw-Do1"/>
                 <constraint firstItem="AUQ-ey-ySc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="1Ym-jL-GQT"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="2Yp-Dc-3ah"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cYa-Nv-UX6" secondAttribute="trailing" constant="64" id="3fS-MP-fMm"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="3tx-dD-Qhc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cYa-Nv-UX6" secondAttribute="bottom" constant="30" id="4OD-B7-MKT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DeL-Hk-lR0" secondAttribute="trailing" constant="3" id="5f0-m2-7SX"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="8jX-qS-kQE"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8qa-f7-Kbf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4oV-yd-eho" secondAttribute="trailing" constant="64" id="9GI-c1-M2y"/>
+                <constraint firstItem="4oV-yd-eho" firstAttribute="top" secondItem="fYO-jm-8Yv" secondAttribute="bottom" constant="8" symbolic="YES" id="BDp-zS-bpQ"/>
                 <constraint firstItem="HJH-rj-7T8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="7" id="Fxr-J6-u6I"/>
                 <constraint firstItem="ATe-7p-Tg9" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="8" symbolic="YES" id="GD4-qJ-rPx"/>
                 <constraint firstItem="5oj-Ey-dys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="GwJ-UO-ccH"/>
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KLc-4U-Jes"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvl-Ic-aaf" secondAttribute="trailing" constant="64" id="ODI-pY-eok"/>
                 <constraint firstItem="DeL-Hk-lR0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RUf-J8-Qs2"/>
+                <constraint firstItem="4oV-yd-eho" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="Tpm-6u-v0Y"/>
                 <constraint firstItem="Kf5-QI-qYf" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="16" id="Tun-Dq-FGj"/>
-                <constraint firstItem="cYa-Nv-UX6" firstAttribute="top" secondItem="fYO-jm-8Yv" secondAttribute="bottom" constant="1" id="Uv7-dU-y6l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4oV-yd-eho" secondAttribute="bottom" constant="7" id="b5V-xs-ERe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYO-jm-8Yv" secondAttribute="trailing" constant="64" id="bHt-iM-Tmq"/>
                 <constraint firstItem="AUQ-ey-ySc" firstAttribute="top" secondItem="YYb-Sf-Qe8" secondAttribute="bottom" constant="33" id="bvH-0W-MwQ"/>
                 <constraint firstItem="Mvl-Ic-aaf" firstAttribute="top" secondItem="AUQ-ey-ySc" secondAttribute="bottom" constant="8" id="c6N-0f-rCP"/>
@@ -130,8 +132,6 @@
                 <constraint firstItem="YYb-Sf-Qe8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m5c-7F-vgI"/>
                 <constraint firstItem="HJH-rj-7T8" firstAttribute="centerY" secondItem="DeL-Hk-lR0" secondAttribute="centerY" id="nMX-uy-Ck3"/>
                 <constraint firstItem="Fz4-IX-AlN" firstAttribute="centerY" secondItem="fYO-jm-8Yv" secondAttribute="centerY" id="ohO-HX-w7m"/>
-                <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="pTO-e8-ph7"/>
-                <constraint firstItem="cYa-Nv-UX6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="peT-zi-Wdd"/>
                 <constraint firstItem="fYO-jm-8Yv" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="qI7-cp-cQO"/>
                 <constraint firstItem="Kf5-QI-qYf" firstAttribute="leading" secondItem="ATe-7p-Tg9" secondAttribute="trailing" constant="46" id="qxt-ay-kLN"/>
                 <constraint firstItem="ATe-7p-Tg9" firstAttribute="leading" secondItem="AUQ-ey-ySc" secondAttribute="leading" id="wgd-y0-8Hn"/>
