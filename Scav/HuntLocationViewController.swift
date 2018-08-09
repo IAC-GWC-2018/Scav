@@ -36,6 +36,7 @@ class HuntLocationViewController: UIViewController {
     @IBAction func hintButtonTapped(_ sender:
         UIButton) {
         addHint()
+        checkLocationReqs()
     }
     
     @IBOutlet weak var hintTableView: UITableView!
@@ -86,7 +87,7 @@ class HuntLocationViewController: UIViewController {
         saveLocationButton.isEnabled = false
     }
     
-    func checkLocationReqs(sender: AnyObject) {
+    func checkLocationReqs() {
         if (titleTextField.text?.isEmpty)! || (hints.count < 1) || (mapView.annotations.count < 1) {
             styleSaveLocationButton()
         } else {
@@ -96,7 +97,7 @@ class HuntLocationViewController: UIViewController {
     }
     
     @IBAction func textFieldDidBeginEditing(_ textField: UITextField) {
-        checkLocationReqs(sender: textField)
+        checkLocationReqs()
     }
     
     @IBAction func buttonTapped(_ sender:
@@ -110,6 +111,7 @@ class HuntLocationViewController: UIViewController {
             let touchPoint: CGPoint = gestureRecognizer.location(in: mapView)
             let currentCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
             addAnnotationOnLocation(pointedCoordinate: currentCoordinate)
+            checkLocationReqs()
         }
     }
     

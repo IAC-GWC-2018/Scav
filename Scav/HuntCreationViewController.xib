@@ -53,7 +53,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingDidEnd" id="777-RW-IAr"/>
+                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingChanged" id="8t0-yu-uWn"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hunt Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-9r-ZLH">
@@ -68,19 +68,9 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingDidEnd" id="gYe-MS-Oca"/>
+                        <action selector="textFieldDidBeginEditing" destination="-1" eventType="editingChanged" id="mxR-0A-x6I"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-Sx-1lX">
-                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="3YV-PI-lGG"/>
-                    </constraints>
-                    <state key="normal" title="Save Hunt"/>
-                    <connections>
-                        <action selector="saveHunt:" destination="-1" eventType="touchUpInside" id="x9O-7W-k1c"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-he-Wpo">
                     <rect key="frame" x="64" y="414" width="247" height="113"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,6 +87,19 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-Sx-1lX">
+                    <rect key="frame" x="137" y="597" width="100" height="50"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3YV-PI-lGG"/>
+                    </constraints>
+                    <state key="normal" title="Save Hunt">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="saveHunt:" destination="-1" eventType="touchUpInside" id="x9O-7W-k1c"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -106,28 +109,26 @@
                 <constraint firstItem="bt2-hf-iHi" firstAttribute="top" secondItem="v19-RN-c3F" secondAttribute="bottom" constant="176" id="8yX-9L-Qgc"/>
                 <constraint firstItem="bt2-hf-iHi" firstAttribute="leading" secondItem="iSf-ua-yrz" secondAttribute="trailing" constant="133" id="9m9-bY-Bxc"/>
                 <constraint firstItem="v19-RN-c3F" firstAttribute="top" secondItem="PZV-9r-ZLH" secondAttribute="bottom" constant="17" id="CCs-ty-l6S"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FaK-cr-v1g"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gde-iX-P08"/>
                 <constraint firstItem="A1g-JM-gQo" firstAttribute="leading" secondItem="PZV-9r-ZLH" secondAttribute="leading" id="Lbf-5O-TsT"/>
                 <constraint firstItem="iSf-ua-yrz" firstAttribute="top" secondItem="Ijg-Xt-d7x" secondAttribute="bottom" constant="56" id="M3Y-iK-tCX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v19-RN-c3F" secondAttribute="trailing" constant="64" id="O1q-5Z-nWk"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q69-yf-4bq"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="top" secondItem="jEM-he-Wpo" secondAttribute="bottom" constant="90" id="UEv-Hf-AOk"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="V21-x7-Jdb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jEM-he-Wpo" secondAttribute="trailing" constant="64" id="V7K-Xd-cGz"/>
                 <constraint firstItem="PZV-9r-ZLH" firstAttribute="top" secondItem="nVY-UC-Uw9" secondAttribute="bottom" constant="65" id="V9B-0P-gBu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ijg-Xt-d7x" secondAttribute="trailing" constant="64" id="X42-Ju-n5w"/>
+                <constraint firstItem="HfV-Sx-1lX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="137" id="YUD-Mf-Oxq"/>
                 <constraint firstItem="PZV-9r-ZLH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="ZOl-bg-zjO"/>
                 <constraint firstItem="nVY-UC-Uw9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="bC1-iQ-YRL"/>
                 <constraint firstItem="Ijg-Xt-d7x" firstAttribute="leading" secondItem="PZV-9r-ZLH" secondAttribute="leading" id="d5d-74-TZh"/>
                 <constraint firstItem="Ijg-Xt-d7x" firstAttribute="top" secondItem="A1g-JM-gQo" secondAttribute="bottom" constant="16" id="dW6-u0-kWS"/>
+                <constraint firstItem="HfV-Sx-1lX" firstAttribute="top" secondItem="jEM-he-Wpo" secondAttribute="bottom" constant="70" id="em1-Ie-J78"/>
                 <constraint firstItem="iSf-ua-yrz" firstAttribute="top" secondItem="h7G-zT-Y1D" secondAttribute="bottom" constant="8" id="fYb-qx-KRo"/>
+                <constraint firstAttribute="bottom" secondItem="HfV-Sx-1lX" secondAttribute="bottom" constant="20" symbolic="YES" id="fiy-r7-hzz"/>
                 <constraint firstItem="jEM-he-Wpo" firstAttribute="top" secondItem="bt2-hf-iHi" secondAttribute="bottom" constant="20" id="jJl-KE-0vb"/>
                 <constraint firstItem="h7G-zT-Y1D" firstAttribute="leading" secondItem="iSf-ua-yrz" secondAttribute="leading" id="kDB-5Y-rtG"/>
                 <constraint firstItem="nVY-UC-Uw9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="l5L-SY-6oK"/>
+                <constraint firstItem="HfV-Sx-1lX" firstAttribute="centerX" secondItem="jEM-he-Wpo" secondAttribute="centerX" id="lw7-6M-hw0"/>
                 <constraint firstItem="v19-RN-c3F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="mNA-my-l9o"/>
                 <constraint firstItem="iSf-ua-yrz" firstAttribute="leading" secondItem="PZV-9r-ZLH" secondAttribute="leading" id="ngk-QP-ayF"/>
-                <constraint firstItem="HfV-Sx-1lX" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="oNg-8N-A8q"/>
                 <constraint firstItem="bt2-hf-iHi" firstAttribute="trailing" secondItem="v19-RN-c3F" secondAttribute="trailing" id="qrL-QY-g0v"/>
                 <constraint firstItem="A1g-JM-gQo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="64" id="rbo-KV-tMf"/>
             </constraints>
