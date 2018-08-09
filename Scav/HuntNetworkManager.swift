@@ -37,7 +37,7 @@ class HuntNetworkManager {
         }
         
         private var header: [String: String] {
-            return ["Content-Type": "Application/json"]
+            return ["Content-Type": "application/json"]
         }
         
         private var method: HTTPMethod {
