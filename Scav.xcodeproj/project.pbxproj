@@ -12,14 +12,9 @@
 		14454355210B921600D164FC /* HuntGameTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14454353210B921600D164FC /* HuntGameTracker.swift */; };
 		14E3FC3D20F67F2F00DAE40D /* HuntMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */; };
 		14E3FC3E20F67F2F00DAE40D /* HuntMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */; };
-		14E3FC4420F69A8100DAE40D /* UIViewController+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */; };
-		14E3FC4720F69E3000DAE40D /* UserLocationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */; };
-		14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */; };
 		446F4076211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */; };
 		45D425D9210B9623003CF06D /* HuntLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D425D7210B9623003CF06D /* HuntLocationViewController.swift */; };
 		45D425DA210B9623003CF06D /* HuntLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D425D8210B9623003CF06D /* HuntLocationViewController.xib */; };
-		45D425DE210BA74A003CF06D /* myLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D425DD210BA74A003CF06D /* myLocationsView.swift */; };
-		45D425E0210BA761003CF06D /* myLocationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D425DF210BA761003CF06D /* myLocationsView.xib */; };
 		B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */; };
 		B7C07A8720F67F3300832294 /* HuntCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */; };
 		E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21431D220F67F2F00531E96 /* HuntListViewController.swift */; };
@@ -47,14 +42,9 @@
 		14454353210B921600D164FC /* HuntGameTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntGameTracker.swift; sourceTree = "<group>"; };
 		14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntMapViewController.swift; sourceTree = "<group>"; };
 		14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntMapViewController.xib; sourceTree = "<group>"; };
-		14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+XIB.swift"; sourceTree = "<group>"; };
-		14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationAlertViewController.swift; sourceTree = "<group>"; };
-		14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserLocationAlertViewController.xib; sourceTree = "<group>"; };
 		446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20180801_210825.gpx; sourceTree = "<group>"; };
 		45D425D7210B9623003CF06D /* HuntLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntLocationViewController.swift; sourceTree = "<group>"; };
 		45D425D8210B9623003CF06D /* HuntLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HuntLocationViewController.xib; sourceTree = "<group>"; };
-		45D425DD210BA74A003CF06D /* myLocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myLocationsView.swift; sourceTree = "<group>"; };
-		45D425DF210BA761003CF06D /* myLocationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myLocationsView.xib; sourceTree = "<group>"; };
 		62B902B39E68C3597E5F3274 /* Pods-Scav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scav.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scav/Pods-Scav.debug.xcconfig"; sourceTree = "<group>"; };
 		86255362BF12D2E297646C3C /* Pods-Scav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scav.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scav/Pods-Scav.release.xcconfig"; sourceTree = "<group>"; };
 		B7C07A8420F67F3300832294 /* HuntCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntCreationViewController.swift; sourceTree = "<group>"; };
@@ -151,13 +141,8 @@
 				B7C07A8520F67F3300832294 /* HuntCreationViewController.xib */,
 				45D425D8210B9623003CF06D /* HuntLocationViewController.xib */,
 				45D425D7210B9623003CF06D /* HuntLocationViewController.swift */,
-				45D425DD210BA74A003CF06D /* myLocationsView.swift */,
-				45D425DF210BA761003CF06D /* myLocationsView.xib */,
 				14E3FC3B20F67F2F00DAE40D /* HuntMapViewController.swift */,
 				14E3FC3C20F67F2F00DAE40D /* HuntMapViewController.xib */,
-				14E3FC4320F69A8100DAE40D /* UIViewController+XIB.swift */,
-				14E3FC4520F69E3000DAE40D /* UserLocationAlertViewController.swift */,
-				14E3FC4620F69E3000DAE40D /* UserLocationAlertViewController.xib */,
 				14454353210B921600D164FC /* HuntGameTracker.swift */,
 				446F4075211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx */,
 				140DCAC7211B669500214A64 /* CompletedHuntViewController.swift */,
@@ -227,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E225074E20F69ABF005D6103 /* HuntListTableViewCell.xib in Resources */,
-				45D425E0210BA761003CF06D /* myLocationsView.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
 				E21431D520F67F2F00531E96 /* HuntListViewController.xib in Resources */,
 				FC384C8920F6713200F4C60A /* LaunchScreen.storyboard in Resources */,
@@ -238,7 +222,6 @@
 				FC384C8620F6713200F4C60A /* Assets.xcassets in Resources */,
 				446F4076211B5F9E00A2D4C2 /* mapstogpx20180801_210825.gpx in Resources */,
 				14E3FC3E20F67F2F00DAE40D /* HuntMapViewController.xib in Resources */,
-				14E3FC4820F69E3000DAE40D /* UserLocationAlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +284,11 @@
 				E21431D420F67F2F00531E96 /* HuntListViewController.swift in Sources */,
 				E2225E62210B841F002C706D /* Hint.swift in Sources */,
 				E2225E5E210B8404002C706D /* Hunt.swift in Sources */,
-				45D425DE210BA74A003CF06D /* myLocationsView.swift in Sources */,
 				E2225E64210BA8D3002C706D /* HuntNetworkManager.swift in Sources */,
 				B7C07A8620F67F3300832294 /* HuntCreationViewController.swift in Sources */,
-				14E3FC4420F69A8100DAE40D /* UIViewController+XIB.swift in Sources */,
 				FC384C7F20F6713000F4C60A /* AppDelegate.swift in Sources */,
 				14454355210B921600D164FC /* HuntGameTracker.swift in Sources */,
 				14E3FC3D20F67F2F00DAE40D /* HuntMapViewController.swift in Sources */,
-				14E3FC4720F69E3000DAE40D /* UserLocationAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

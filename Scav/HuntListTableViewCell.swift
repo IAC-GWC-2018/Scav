@@ -13,18 +13,4 @@ class HuntListTableViewCell: UITableViewCell {
     @IBOutlet weak var huntNameLabel: UILabel!
     @IBOutlet weak var huntDescriptionLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    
-    
 }

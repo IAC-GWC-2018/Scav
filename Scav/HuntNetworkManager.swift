@@ -72,6 +72,5 @@ class HuntNetworkManager {
         task.resume()
         tasks.append(task)
     }
-
     
 }

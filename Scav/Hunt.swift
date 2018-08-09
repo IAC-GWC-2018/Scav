@@ -18,17 +18,6 @@ struct Hunt: Codable {
         case title, description, destinations, id
     }
 
-    static func getHunts(completion: (([Hunt], Error?) -> Void)) {
-
-        HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
-            if (error != nil) {
-                print(error!)
-            }
-        }
-
-
-    }
-
     static func testHunts() -> [Hunt] {
         return [Hunt(title: "Demo", description: "A tour of NYC!", destinations: Destination.testDestination(), id: 0)]
     }
