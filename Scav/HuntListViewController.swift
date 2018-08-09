@@ -11,7 +11,7 @@ import UIKit
 class HuntListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    private let refreshControl = UIRefreshControl()
     var hunts = [Hunt]()
 
     static func create() -> HuntListViewController {
@@ -34,17 +34,21 @@ class HuntListViewController: UIViewController {
         fetchHunts()
     }
     
-    private func fetchHunts() {
+    @objc private func fetchHunts() {
         HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
             guard let data = data,
-            let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [AnyHashable: Any] else {
+                let json = try? JSONSerialization.jsonObject(with: data, options: []),
+                let jsonArray = json as? [[AnyHashable: AnyHashable]] else {
                     //present alert that there was an error
                     return
             }
             
             let decoder = JSONDecoder()
-            self.hunts = decoder.parse(from: json) ?? []
-            self.tableView.reloadData()
+            self.hunts = jsonArray.compactMap { decoder.parse(from: $0) }
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -56,6 +60,8 @@ class HuntListViewController: UIViewController {
         tableView.backgroundColor = UIColor(red: 132 / 255, green: 254 / 255, blue: 235 / 255, alpha: 0.8)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.register(UINib(nibName: String(describing: HuntListTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntListTableViewCell.self))
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(fetchHunts), for: .valueChanged)
     }
 
     private func createAddHuntButton() {
