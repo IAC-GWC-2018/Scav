@@ -22,6 +22,7 @@ class HuntListViewController: UIViewController {
         super.viewDidLoad()
 //        present(CompletedHuntViewController(), animated: true, completion: nil)
         // Do any additional setup after loading the view.
+        hunts = Hunt.testHunts()
         configureTableView()
         createAddHuntButton()
         self.title = "Hunt List"

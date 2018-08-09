@@ -30,6 +30,6 @@ struct Hunt: Codable {
     }
 
     static func testHunts() -> [Hunt] {
-        return [Hunt(title: "hunt0", description: "hunt0 description", destinations: Destination.testDestination(), id: 0)]
+        return [Hunt(title: "Demo", description: "A tour of NYC!", destinations: Destination.testDestination(), id: 0)]
     }
 }
