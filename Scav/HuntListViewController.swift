@@ -78,17 +78,7 @@ class HuntListViewController: UIViewController {
         let creationVC = HuntCreationViewController.create()
         present(creationVC, animated: true)
     }
-
-
-        // Do any additional setup if required.
-
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 }
 
 extension HuntListViewController: UITableViewDataSource {
