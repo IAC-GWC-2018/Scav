@@ -26,15 +26,13 @@ class HuntNetworkManager {
         case createHunt(hunt: Hunt)
         
         private var baseURLString: String {
-            return "https://scav.com"
+            return "https://iac-gwc-scav.herokuapp.com"
         }
         
         private var urlString: String {
             switch self {
-            case .getHunts:
+            case .getHunts, .createHunt:
                 return "/hunts"
-            case .createHunt:
-                return "/hunt"
             }
         }
         
@@ -74,5 +72,6 @@ class HuntNetworkManager {
         task.resume()
         tasks.append(task)
     }
+
     
 }

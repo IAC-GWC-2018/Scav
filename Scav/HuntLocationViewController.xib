@@ -38,7 +38,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="165-iD-qsh"/>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingChanged" id="iyU-dc-D7W"/>
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz4-IX-AlN">
@@ -60,7 +60,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidEnd" id="ItD-pT-aVf"/>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingChanged" id="wFS-d3-Rkt"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oj-Ey-dys">

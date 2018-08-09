@@ -12,7 +12,7 @@ class HuntListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var hunts = Hunt.testHunts()
+    var hunts = [Hunt]()
 
     static func create() -> HuntListViewController {
         return self.init(nibName: String(describing: self.self), bundle: nil)
@@ -27,13 +27,32 @@ class HuntListViewController: UIViewController {
         self.title = "Hunt List"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "GujaratiSangamMN-Bold", size: 20.0)!]
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchHunts()
+    }
+    
+    private func fetchHunts() {
+        HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
+            guard let data = data,
+            let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [AnyHashable: Any] else {
+                    //present alert that there was an error
+                    return
+            }
+            
+            let decoder = JSONDecoder()
+            self.hunts = decoder.parse(from: json) ?? []
+            self.tableView.reloadData()
+        }
+    }
 
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor.green.withAlphaComponent(0.2)
+        tableView.backgroundColor = UIColor(red: 132 / 255, green: 254 / 255, blue: 235 / 255, alpha: 0.8)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.register(UINib(nibName: String(describing: HuntListTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntListTableViewCell.self))
     }

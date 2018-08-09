@@ -14,17 +14,39 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         locationTableView.insertRows(at: [IndexPath(row: destinations.count - 1, section: 0)], with: .automatic)
     }
     
-    private var destinations = [Destination]()
-        
-    @IBOutlet weak var textField: UITextField!
+    func checkHuntReq() {
+        if(huntTitleField.text?.isEmpty == true) || (huntDescriptionField.text?.isEmpty == true) ||  (destinations.count < 1) {
+            saveHuntButton.isEnabled = false
+            saveHuntButton.layer.backgroundColor = UIColor.lightGray.cgColor
+        } else {
+            saveHuntButton.layer.backgroundColor = UIColor.blue.cgColor
+            saveHuntButton.isEnabled = true
+        }
+    }
     
-    @IBOutlet weak var tableView: UIStackView!
+    @IBAction func textFieldDidBeginEditing() {
+        checkHuntReq()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkHuntReq()
+    }
+
+    
+    @IBOutlet weak var huntTitleField: UITextField!
+    
+    private var destinations = [Destination]()
+            
+    @IBOutlet weak var saveHuntButton: UIButton!
     
     @IBOutlet weak var add: UIButton!
 
     @IBOutlet weak var locationNumLabel: UILabel!
     
     @IBOutlet weak var locationTableView: UITableView!
+    
+    @IBOutlet weak var huntDescriptionField: UITextField!
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -37,6 +59,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         // Do any additional setup after loading the view.
         displayLocationNum()
         configureTableView()
+        styleSaveHuntButton()
     }
     
     private func configureTableView() {
@@ -47,14 +70,45 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         locationTableView.register(UINib(nibName: String(describing: HuntLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntLocationTableViewCell.self))
     }
     
+    func styleSaveHuntButton() {
+        saveHuntButton.layer.borderWidth = 2
+        saveHuntButton.layer.borderColor = UIColor.clear.cgColor
+        saveHuntButton.layer.cornerRadius = 8
+        saveHuntButton.layer.backgroundColor = UIColor.lightGray.cgColor
+        saveHuntButton.isEnabled = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveHunt(_ sender: UIButton) {
+        let hunt = Hunt(title: huntTitleField.text!, description: huntDescriptionField.text!, destinations: destinations, id: 8)
+        print(hunt)
+        
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        
+        activityIndicator.center = view.center
+        
+        activityIndicator.hidesWhenStopped = true
+        
+        activityIndicator.startAnimating()
+        
+        view.addSubview(activityIndicator)
+        
+        HuntNetworkManager.shared.process(.createHunt(hunt: hunt)) { (data, response, error) in
+            if let error = error {
+                activityIndicator.stopAnimating()
+                //pop up: there is an error
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        }
+    }
     
-    @IBAction func buttonTapped(_ sender:
-        UIButton) {
+    @IBAction func buttonTapped(_ sender: UIButton) {
         showHuntLocation()
     }
 
@@ -67,8 +121,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         present(locationVC, animated: true)
     }
 
-    @IBAction func back (_ sender:
-    UIButton) {
+    @IBAction func back (_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -96,6 +149,8 @@ extension HuntCreationViewController: UITableViewDataSource {
         let location = destinations[indexPath.row]
         cell.cellLocationTextLabel.text = (String) (indexPath.row + 1)
         cell.cellLocationNameLabel.text = location.title
+        print(location.location.longitude)
+        print(location.location.latitude)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
