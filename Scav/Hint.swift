@@ -18,6 +18,8 @@ struct Hint: Codable {
 
     static func testHint() -> [Hint] {
         return [Hint(description: "1", id: 0),
-                Hint(description: "2", id: 0)]
+                Hint(description: "2", id: 0),
+                Hint(description: "3", id: 0),
+                Hint(description: "4", id: 0)]
     }
 }
