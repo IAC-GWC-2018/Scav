@@ -20,7 +20,6 @@ class HuntListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hunts = Hunt.testHunts()
         configureTableView()
         createAddHuntButton()
         self.title = "Hunt List"
@@ -43,9 +42,10 @@ class HuntListViewController: UIViewController {
             }
             
             let decoder = JSONDecoder()
+            var newHunts = Hunt.testHunts()
             let parsedHunts: [Hunt] = jsonArray.compactMap { decoder.parse(from: $0) }
-            self.hunts.append(contentsOf: parsedHunts)
-            
+            newHunts.append(contentsOf: parsedHunts)
+            self.hunts = newHunts
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
