@@ -72,6 +72,8 @@ class HuntLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let press = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.7589, longitude: -73.9851), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: false)
         mapView.addGestureRecognizer(press)
         displayLocationNum()
         styleSaveLocationButton()
