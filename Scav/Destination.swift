@@ -20,6 +20,6 @@ struct Destination: Codable {
     }
 
     static func testDestination() -> [Destination] {
-        return [Destination(title: "World Trade Center", location: Location(latitude: 40.7118011, longitude: -74.0131196, id: 12), hints: Hint.testHint(), id: 0),Destination(title: "Empire State Building", location: Location(latitude: 40.7485413, longitude: -73.9857577, id: 11), hints: Hint.testHint(), id: 1),Destination(title: "Dotdash", location: Location(latitude: 40.7567644, longitude: -73.9857192, id: 11), hints: Hint.testHint(), id: 1),Destination(title: "Guggenheim", location: Location(latitude: 40.7829796, longitude: -73.9589706, id: 11), hints: Hint.testHint(), id: 1)]
+        return [Destination(title: "World Trade Center", location: Location(latitude: 40.7118011, longitude: -74.0131196, id: 12), hints: [Hint.worldTradeHint, Hint.worldTradeHint2], id: 0),Destination(title: "Empire State Building", location: Location(latitude: 40.7485413, longitude: -73.9857577, id: 11), hints: [Hint.empireHint], id: 1),Destination(title: "Dotdash", location: Location(latitude: 40.7567644, longitude: -73.9857192, id: 11), hints: [Hint.dotDashHint], id: 1),Destination(title: "Guggenheim", location: Location(latitude: 40.7829796, longitude: -73.9589706, id: 11), hints: [Hint.museumHint], id: 1)]
     }
 }
