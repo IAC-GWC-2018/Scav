@@ -18,7 +18,7 @@ class CompletedHuntViewController: UIViewController {
 
     @IBOutlet weak var congratsLabel: UILabel!
     @IBOutlet weak var destinationTableView: UITableView!
-    @IBOutlet weak var gifImageView: GIFImageView!
+    // @IBOutlet weak var gifImageView: GIFImageView!
     @IBOutlet weak var completeButton: UIButton!
     private var hunt: Hunt?
     private weak var delegate: CompletedHuntDismissalDelegate?
