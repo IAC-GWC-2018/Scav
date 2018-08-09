@@ -77,7 +77,15 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     }
     
     @IBAction func saveHunt(_ sender: UIButton) {
-        let hunt = Hunt(title: huntTitleField.text!, description: huntDescriptionField.text!, destinations: destinations, id: 0)
+        guard let title = huntTitleField.text,
+            let description = huntDescriptionField.text else {
+                return
+        }
+        
+        let hunt = Hunt(title: title,
+                        description: description,
+                        destinations: destinations,
+                        id: 0)
         
         HuntNetworkManager.shared.process(.createHunt(hunt: hunt)) { (data, response, error) in
             if let error = error {
