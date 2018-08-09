@@ -44,7 +44,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         locationTableView.delegate = self as? UITableViewDelegate
         locationTableView.rowHeight = UITableViewAutomaticDimension
         locationTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        locationTableView.register(UINib(nibName: String(describing: HuntCreationLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntCreationLocationTableViewCell.self))
+        locationTableView.register(UINib(nibName: String(describing: HuntLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntLocationTableViewCell.self))
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,14 +92,14 @@ extension HuntCreationViewController: UITableViewDataSource {
         return destinations.count
     }
     
-    private func insertLocationData(_ cell: HuntCreationLocationTableViewCell, cellForRowAt indexPath: IndexPath) {
+    private func insertLocationData(_ cell: HuntLocationTableViewCell, cellForRowAt indexPath: IndexPath) {
         let location = destinations[indexPath.row]
         cell.cellLocationTextLabel.text = (String) (indexPath.row + 1)
         cell.cellLocationNameLabel.text = location.title
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HuntCreationLocationTableViewCell.self)) as? HuntCreationLocationTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HuntLocationTableViewCell.self)) as? HuntLocationTableViewCell else {
             return UITableViewCell()
         }
         

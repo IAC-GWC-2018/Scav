@@ -140,7 +140,8 @@ class HuntMapViewController: UIViewController {
 
 extension HuntMapViewController: HuntGameTrackerDelegate {
     func didComplete(hunt: Hunt) {
-        
+        let vc = CompletedHuntViewController.create(hunt: hunt, delegate: self)
+        present(vc, animated: true, completion: nil)
     }
     
     func didFind(destination: Destination) {
@@ -181,8 +182,9 @@ extension HuntMapViewController: CLLocationManagerDelegate {
         print("error:: (error)")
     }
 }
-//As of time of writing, I am offline on the train and do not want to forget my idea so I decided to add it here as a comment. The function locationManager.requestLocation() works on iOS 9+ and is a one-time request of the user's location. We can implement this when the user presses the "Am I here?" button. The kogic can read something like
-//if amIHereButton == true {
-    //locationManager.requestLoation()
-//}
-//or something to this extent
+
+extension HuntMapViewController: CompletedHuntDismissalDelegate {
+    func dismiss() {
+        dismiss(animated: false, completion: nil)
+    }
+}

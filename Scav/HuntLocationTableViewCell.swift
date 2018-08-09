@@ -1,5 +1,5 @@
 //
-//  HuntCreationLocationTableViewCell.swift
+//  HuntLocationTableViewCell.swift
 //  Scav
 //
 //  Created by Mayki Hu on 8/8/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HuntCreationLocationTableViewCell: UITableViewCell {
+class HuntLocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellLocationTextLabel: UILabel!
     @IBOutlet weak var cellLocationNameLabel: UILabel!

@@ -20,6 +20,7 @@ class HuntListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        present(CompletedHuntViewController(), animated: true, completion: nil)
         // Do any additional setup after loading the view.
         configureTableView()
         createAddHuntButton()
@@ -29,6 +30,7 @@ class HuntListViewController: UIViewController {
 
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.green.withAlphaComponent(0.2)

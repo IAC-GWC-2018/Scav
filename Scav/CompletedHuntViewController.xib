@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="completeButton" destination="YCl-zR-XpP" id="vzY-xc-eGR"/>
                 <outlet property="congratsLabel" destination="g6l-Kw-vJa" id="AYE-gl-QiF"/>
-                <outlet property="destinationTableVIew" destination="bpc-an-Dwo" id="b3c-Nr-lmp"/>
+                <outlet property="destinationTableView" destination="bpc-an-Dwo" id="GAg-uS-0Wx"/>
                 <outlet property="gifImageView" destination="LVZ-Hr-TUF" id="DKK-a9-Ytf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,9 +36,11 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCl-zR-XpP">
                     <rect key="frame" x="16" y="619" width="343" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="IbB-Ws-Wws"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="completeButtonPress:" destination="-1" eventType="touchUpInside" id="cD3-CU-bfk"/>
