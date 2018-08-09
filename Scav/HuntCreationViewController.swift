@@ -62,8 +62,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     }
     
     private func configureTableView() {
-        locationTableView.dataSource = (self as UITableViewDataSource)
-        locationTableView.delegate = self as? UITableViewDelegate
+        locationTableView.dataSource = self
         locationTableView.rowHeight = UITableViewAutomaticDimension
         locationTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         locationTableView.register(UINib(nibName: String(describing: HuntLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntLocationTableViewCell.self))
