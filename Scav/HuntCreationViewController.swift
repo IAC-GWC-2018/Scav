@@ -32,7 +32,6 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         super.viewWillAppear(animated)
         checkHuntReq()
     }
-
     
     @IBOutlet weak var huntTitleField: UITextField!
     
@@ -84,27 +83,14 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     }
     
     @IBAction func saveHunt(_ sender: UIButton) {
-        let hunt = Hunt(title: huntTitleField.text!, description: huntDescriptionField.text!, destinations: destinations, id: 8)
-        print(hunt)
-        
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        
-        activityIndicator.center = view.center
-        
-        activityIndicator.hidesWhenStopped = true
-        
-        activityIndicator.startAnimating()
-        
-        view.addSubview(activityIndicator)
+        let hunt = Hunt(title: huntTitleField.text!, description: huntDescriptionField.text!, destinations: destinations, id: 0)
         
         HuntNetworkManager.shared.process(.createHunt(hunt: hunt)) { (data, response, error) in
             if let error = error {
-                activityIndicator.stopAnimating()
-                //pop up: there is an error
+                print(error)
             } else {
                 self.dismiss(animated: true, completion: nil)
             }
-            
         }
     }
     
