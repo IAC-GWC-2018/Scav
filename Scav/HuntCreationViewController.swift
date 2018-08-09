@@ -17,7 +17,9 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
     func checkHuntReq() {
         if(huntTitleField.text?.isEmpty == true) || (huntDescriptionField.text?.isEmpty == true) ||  (destinations.count < 1) {
             saveHuntButton.isEnabled = false
+            saveHuntButton.layer.backgroundColor = UIColor.lightGray.cgColor
         } else {
+            saveHuntButton.layer.backgroundColor = UIColor.blue.cgColor
             saveHuntButton.isEnabled = true
         }
     }
@@ -57,6 +59,7 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         // Do any additional setup after loading the view.
         displayLocationNum()
         configureTableView()
+        styleSaveHuntButton()
     }
     
     private func configureTableView() {
@@ -65,6 +68,14 @@ class HuntCreationViewController: UIViewController, AddHuntDestinationDelegate {
         locationTableView.rowHeight = UITableViewAutomaticDimension
         locationTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         locationTableView.register(UINib(nibName: String(describing: HuntCreationLocationTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntCreationLocationTableViewCell.self))
+    }
+    
+    func styleSaveHuntButton() {
+        saveHuntButton.layer.borderWidth = 2
+        saveHuntButton.layer.borderColor = UIColor.clear.cgColor
+        saveHuntButton.layer.cornerRadius = 8
+        saveHuntButton.layer.backgroundColor = UIColor.lightGray.cgColor
+        saveHuntButton.isEnabled = false
     }
     
     override func didReceiveMemoryWarning() {

@@ -50,7 +50,7 @@ class HuntListViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor.green.withAlphaComponent(0.2)
+        tableView.backgroundColor = UIColor(red: 132 / 255, green: 254 / 255, blue: 235 / 255, alpha: 0.8)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.register(UINib(nibName: String(describing: HuntListTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: HuntListTableViewCell.self))
     }
