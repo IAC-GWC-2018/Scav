@@ -36,14 +36,17 @@ class HuntListViewController: UIViewController {
     private func fetchHunts() {
         HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
             guard let data = data,
-            let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [AnyHashable: Any] else {
+                let json = try? JSONSerialization.jsonObject(with: data, options: []),
+                let jsonArray = json as? [[AnyHashable: AnyHashable]] else {
                     //present alert that there was an error
                     return
             }
             
             let decoder = JSONDecoder()
-            self.hunts = decoder.parse(from: json) ?? []
-            self.tableView.reloadData()
+            self.hunts = jsonArray.compactMap { decoder.parse(from: $0) }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 
