@@ -20,9 +20,6 @@ class HuntListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        present(CompletedHuntViewController(), animated: true, completion: nil)
-        // Do any additional setup after loading the view.
-        hunts = Hunt.testHunts()
         configureTableView()
         createAddHuntButton()
         self.title = "Hunt List"
@@ -35,21 +32,25 @@ class HuntListViewController: UIViewController {
     }
     
     @objc private func fetchHunts() {
-        HuntNetworkManager.shared.process(.getHunts) { (data, response, error) in
-            guard let data = data,
-                let json = try? JSONSerialization.jsonObject(with: data, options: []),
-                let jsonArray = json as? [[AnyHashable: AnyHashable]] else {
-                    //present alert that there was an error
-                    return
-            }
+        refreshControl.endRefreshing()
+        hunts = Hunt.testHunts()
+        tableView.reloadData()
+
+//        HuntNetworkManager.shared.process(.getHunts) { (data, _, _) in
+//            guard let data = data,
+//                let json = try? JSONSerialization.jsonObject(with: data, options: []),
+//                let jsonArray = json as? [[AnyHashable: AnyHashable]] else {
+//                    //present alert that there was an error
+//                    return
+//            }
             
-            let decoder = JSONDecoder()
-            self.hunts = jsonArray.compactMap { decoder.parse(from: $0) }
-            DispatchQueue.main.async {
-                self.refreshControl.endRefreshing()
-                self.tableView.reloadData()
-            }
-        }
+//            let decoder = JSONDecoder()
+//            self.hunts = jsonArray.compactMap { decoder.parse(from: $0) }
+//            DispatchQueue.main.async {
+//                self.refreshControl.endRefreshing()
+//                self.tableView.reloadData()
+//            }
+//        }
     }
 
     private func configureTableView() {
