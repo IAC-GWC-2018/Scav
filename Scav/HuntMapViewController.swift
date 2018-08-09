@@ -140,7 +140,7 @@ class HuntMapViewController: UIViewController {
 
 extension HuntMapViewController: HuntGameTrackerDelegate {
     func didComplete(hunt: Hunt) {
-        let vc = CompletedHuntViewController.create(hunt: hunt, delegate: self)
+        let vc = CompletedHuntViewController.create(hunt: hunt)
         present(vc, animated: true, completion: nil)
     }
     
@@ -180,11 +180,5 @@ extension HuntMapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: (error)")
-    }
-}
-
-extension HuntMapViewController: CompletedHuntDismissalDelegate {
-    func dismiss() {
-        dismiss(animated: false, completion: nil)
     }
 }

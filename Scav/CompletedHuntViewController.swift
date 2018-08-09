@@ -10,10 +10,6 @@ import UIKit
 //import Gifu
 //import GiphyCoreSDK
 
-protocol CompletedHuntDismissalDelegate: class {
-    func dismiss()
-}
-
 class CompletedHuntViewController: UIViewController {
 
     @IBOutlet weak var congratsLabel: UILabel!
@@ -21,13 +17,11 @@ class CompletedHuntViewController: UIViewController {
     // @IBOutlet weak var gifImageView: GIFImageView!
     @IBOutlet weak var completeButton: UIButton!
     private var hunt: Hunt?
-    private weak var delegate: CompletedHuntDismissalDelegate?
 //    let giphy = GiphyCore.configure(apiKey: "VnuYbTyWtU0w20UvTREyvZNAyvBF59jw")
     
-    static func create(hunt: Hunt, delegate: CompletedHuntDismissalDelegate) -> CompletedHuntViewController {
+    static func create(hunt: Hunt) -> CompletedHuntViewController {
         let vc = CompletedHuntViewController(nibName: String(describing: self.self), bundle: nil)
         vc.hunt = hunt
-        vc.delegate = delegate
         return vc
     }
     
@@ -72,9 +66,7 @@ class CompletedHuntViewController: UIViewController {
     }
     
     @IBAction func completeButtonPress(_ sender: Any) {
-        dismiss(animated: true) {
-            self.delegate?.dismiss()
-        }
+        presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
