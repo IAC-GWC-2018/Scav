@@ -21,4 +21,8 @@ struct Hunt: Codable {
     static func testHunts() -> [Hunt] {
         return [Hunt(title: "Demo", description: "A tour of NYC!", destinations: Destination.testDestination(), id: 0)]
     }
+    
+    static var testCreateHunt: Hunt {
+        return Hunt(title: "New York Food Hunt", description: "Explore various food establishments across NYC", destinations: [], id: 0)
+    }
 }

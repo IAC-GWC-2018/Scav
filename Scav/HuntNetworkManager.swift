@@ -36,6 +36,10 @@ class HuntNetworkManager {
             }
         }
         
+        private var header: [String: String] {
+            return ["Content-Type": "Application/json"]
+        }
+        
         private var method: HTTPMethod {
             switch self {
             case .getHunts:
@@ -58,6 +62,7 @@ class HuntNetworkManager {
             let url = URL(string: baseURLString + urlString)!
             var req = URLRequest(url: url)
             
+            req.allHTTPHeaderFields = header
             req.httpMethod = method.rawValue
             req.httpBody = body
         
